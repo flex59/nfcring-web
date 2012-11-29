@@ -409,3 +409,7 @@ section .roadmapitem:nth-child(3) { opacity:.6 }
 section .roadmapitem:nth-child(2) { opacity:.7 }
 section .roadmapitem:nth-child(1) { opacity:.8 }
 section .roadmapitem:nth-child(0) { opacity:.9 }
+
+.contact{
+  float:right;
+}
