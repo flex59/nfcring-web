@@ -99,6 +99,7 @@ header h2 {
 }
 
 #downloads {
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
@@ -412,4 +413,9 @@ section .roadmapitem:nth-child(0) { opacity:.9 }
 
 .contact{
   float:right;
+}
+
+#torus{
+  width:620px;
+  height:620px;
 }
