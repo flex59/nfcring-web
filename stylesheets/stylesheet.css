@@ -148,7 +148,7 @@ a.button:hover {
 }
 
 a.button span {
-  padding-left: 50px;
+/*  padding-left: 50px;*/
   display: block;
   height: 23px;
 }
@@ -159,10 +159,14 @@ a.button span {
 #transfer span {
   background: transparent url(../images/share.png) 12px 50% no-repeat;
 }
+/*
 #cart span {
   background: transparent url(../images/cart.png) 12px 50% no-repeat;
 }
+*/
 #cart {
+  text-align:center;
+  width:100%;
   margin-right: 0;
 }
 
@@ -417,5 +421,4 @@ section .roadmapitem:nth-child(0) { opacity:.9 }
 
 #torus{
   width:620px;
-  height:420px;
 }
