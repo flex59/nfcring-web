@@ -1,6 +1,0 @@
-[submodule "app"]
-	path = app
-	url = git@github.com:mclear/myWeb.git
-[submodule "go"]
-	path = go
-	url = git@github.com:mclear/myWeb.git
