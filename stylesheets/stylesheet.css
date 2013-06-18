@@ -243,7 +243,6 @@ td {
 /* GENERAL ELEMENT TYPE STYLES */
 
 h1 {
-  text-align:center;
   font-size: 32px;
 } 
 
@@ -420,4 +419,8 @@ section .roadmapitem:nth-child(0) { opacity:.9 }
 
 #torus{
   width:620px;
+}
+
+#main_content{
+  text-align:center;
 }
