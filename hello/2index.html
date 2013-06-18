@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>NFC Ring - Your finger, smarter.</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+		<h1>Hello <span id='name'></span</h1>
+	        <h2>Important notes.</h2>
+			<h3>Do you accept our NDA?</h3>
+			<h3>Each ring has a unique stamp</h2>Please do not resell your ring.
+			<h3>Please use these renders</h3>
+			<h3>Download the "NFC Ring" App from the play store and get started</h3>
+        </header>
+<br/><br/>
+	<div id="torus"><img src="images/ring.png" alt="NFC Ring" title="NFC Ring"></div>
+
+        <hr>
+
+        <section id="main_content">
+  	  <h1>Kickstarting July 20th</h1>
+	  <a href="mailto:tanya@mclear.co?Subject=Tell%20me%20more">Email us to ask more questions</a>
+	</section>
+      </div>
+    </div>
+    <script type="text/javascript">
+	var QueryString = function () {
+      // This function is anonymous, is executed immediately and 
+      // the return value is assigned to QueryString!
+      var query_string = {};
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+    	// If first entry with this name
+        if (typeof query_string[pair[0]] === "undefined") {
+          query_string[pair[0]] = pair[1];
+    	  // If second entry with this name
+        } else if (typeof query_string[pair[0]] === "string") {
+          var arr = [ query_string[pair[0]], pair[1] ];
+          query_string[pair[0]] = arr;
+    	  // If third or later entry with this name
+        } else {
+          query_string[pair[0]].push(pair[1]);
+        }
+      } 
+      return query_string;
+    } ();
+    var name = document.getElementById("name");
+	name.innerHTML = QueryString.name
+	</script>
+  </body>
+</html>
