@@ -10,6 +10,7 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -45,10 +46,10 @@
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
-			  <li><a href="#app">App</a></li>
-			  <li><a href="#faq">FAQ</a></li>
-			  <li><a href="#images">Images</a></li>
-              <li><a href="#contact">Contact</a></li>
+	      <li><a href="#app">App</a></li>
+	      <li><a href="#faq">FAQ</a></li>
+	      <li><a href="#images">Images</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -57,30 +58,48 @@
 
     <div class="container">
 
-      <h1>Hello <span id='name'></span></h1>
+      <h1>Hello <span id='name'></span>. first things first, some important information</h1>
 	  
-	  <p>1. The ring you have is a different design to the final production ring.</p>
-	  <p>2. You need the app to program data onto the ring.</p>
-	  <p>3. </p>
-	  
-	  <h3 id=app><a href="https://play.google.com/store/apps/details?id=co.mclear.nfcring" target="_blank">Download the "NFC Ring" App from the Google play store</a> to get started writing your own ring intents</h3>
- 	  <h3 id=images>Here are some high resolution images of the final product</h3>
-	  <h3 id=faq>Frequently asked questions</h3>
-	  <div class="qna">
+	  <p>1. The ring you have is a different design to the final production ring.  You have a prototype ring that has a unique mark.  Please do not distribute images of the ring you have, instead please use the <a href="#images">high resolution rendered images provided</a>.</p>
+	  <p>2. We will be kickstarting this project on July the 20th at nfcring.com - Please ask us questions and feedback with your suggestions, we're here to help</p>
+          <p>3. You need the <a href="https://play.google.com/store/apps/details?id=co.mclear.nfcring" target="_blank">NFC Ring app</a> to read and write functionality onto the ring.  If you are already familiar with some use cases for NFC then you should just get started playing around.</p>
+          <div id=about>
+             <h1>About</h1>
+             So, you should only be here if you have been given an NFC Ring.  Your Ring has unlimited possibilities.  Use it to unlock and open doors, share pictures, share social network links, share SSH Keys, unlock phones..  It's a long list, you get the idea :)
+          </div>
+          <div id=images>
+             <h1>Images</h1>
+             Renders coming 24th of July...
+          </div>
+	  <div id=app>
+            <h1>Get Started</h1>
+            <a href="https://play.google.com/store/apps/details?id=co.mclear.nfcring" target="_blank">Grab the NFC Ring app from the Play Store</a>
+          </div>
+	  <h1 id=faq>Frequently asked questions</h1>
+
+      <div class="qna">
         <div class="question">How did this ring come about?</div>
-        <div class="answer">Development started in September 2012 </div>
+        <div class="answer">The ring solves multiple problems but the initial core problem was that of security and access control.  The ring is an ideal replacement for house keys</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">Which digital door locks work with the ring?</div>
         <div class="answer">Any NFC door lock will work however be mindful of cheep imitation door locks that don't have genuine NFC support.  We recommend the Samsung SHS-2421 as a good sub 100$ digital door lock that is easy to fit.</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">What operating systems will be supported at Launch?</div>
         <div class="answer">Android.</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
+        <div class="question">What's the deal with printing my own ring out at home??</div>
+        <div class="answer">We provide a size 9.5 STL file for 3d printing your own NFC Ring, we will ship you some of our inlays.  We're doing this to show our love for the hacker community and to get as many people with access to prototyping and developing as quickly and as affordably as possible.</div>
+      </div>
+      <div class="qna">
         <div class="question">What operating systems will be supported after Launch?</div>
         <div class="answer">We will set kickstarter targets where people can vote to get their OS supported.  The app is developed with Apache Cordova(PhoneGap) so supporting additional devices should be relatively trivial.</div>
+      </div>
+      <div class="qna">
+        <div class="question">What other hardware devices can interact with the ring?</div>
+        <div class="answer">Raspberry Pi and Arduino both have NFC modules available that work great with the ring.</div>
       </div>
 	  <div class="qna">
         <div class="question">What's the status with unlocking my phone with the ring?</div>
@@ -102,13 +121,13 @@
         <div class="question">What can the ring be used for?</div>
         <div class="answer">Unlocking doors, Unlocking mobile phones, sharing URLS, sharing information.</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">Who is behind the product?</div>
         <div class="answer">John McLear, the founder of Primary Technology and the Etherpad Foundation and Matt Mullenweg, the founder of Wordpress(Automattik) and various other projects.</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">What will the price be at launch?</div>
-        <div class="answer"></div>
+        <div class="answer">Ranging from 20$ to 600$</div>
       </div>
 	  <div class="qna">
         <div class="question">What size rings are available?</div>
@@ -116,7 +135,7 @@
       </div>
 	  <div class="qna">
         <div class="question">What is the storage capacity of each inlay in the ring?</div>
-        <div class="answer"></div>
+        <div class="answer">144 bytes</div>
       </div>
 	  <div class="qna">
         <div class="question">Is the inlay actual NFC and not an imitation?</div>
@@ -126,25 +145,23 @@
         <div class="question">Can I purchase the 6mm inlay directly?</div>
         <div class="answer">Minimum order quantity of 100000 units</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">What is the width of the ring?</div>
         <div class="answer">Roughly 7mm</div>
       </div>
 	  <div class="qna">
         <div class="question">Can the ring be used to make payments?</div>
-        <div class="answer">Not yet</div>
+        <div class="answer">Not yet and this isn't on our roadmap</div>
       </div>
  	  <div class="qna">
         <div class="question">Is the data stored on the ring encrypted or secured?</div>
         <div class="answer">Your physical security is the security, there is no encryption.  It is very similar to a door key.</div>
       </div>
-	  <div class="qna">
+     <div class="qna">
         <div class="question">Can I purchase rings in bulk for my exhibition/company or so?</div>
         <div class="answer">After Kickstarter we will be taking orders of bulk purchases of the ring</div>
       </div>
 	  
-	  <h3>Each ring has a unique stamp</h2>This is to identify the ring as a prototype ring, it is in the form of a marking on the side of the ring.
-			
     </div> <!-- /container -->
 
     <!-- Le javascript
