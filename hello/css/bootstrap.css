@@ -765,6 +765,9 @@ h3 {
 
 h1 {
   font-size: 38.5px;
+  margin-bottom:50px;
+  border-bottom: solid black 5px;
+  padding-top:20px;
 }
 
 h2 {
