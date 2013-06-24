@@ -4,12 +4,12 @@
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <link rel="stylesheet" type="text/css" href="css/rung.css"/>
+  <link rel="stylesheet" type="text/css" href="css/nfcring.css"/>
   <script type="text/javascript" src="js/jquery-1.9.1.min.js"/></script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-  <title>Rung Action Creator</title>
+  <title>NFC Ring Action Creator</title>
 </head>
 <body>
 
@@ -20,16 +20,16 @@
   <div class="actionName">What do you want to do today?</div>
   <div class="actionContents">
     <button type="button" id="scan" class="btn">Scan QR Code from my computer</button>
-    <button type="button" id="createNew" class="btn">Create new Rung Action</button>
+    <button type="button" id="createNew" class="btn">Create new NFC Ring Action</button>
   </div>
   <div class="overlay"></div>
 </div>
 
 <div class="step action">
   <div class="count"></div>
-  <div class="actionName">What do you want your Rung to do?</div>
+  <div class="actionName">What do you want your NFC Ring to do?</div>
   <div class="actionContents">
-    <div class="rungActions">
+    <div class="NFC RingActions">
 	</div>
   </div>
   <div class="overlay"></div>
@@ -85,7 +85,7 @@
 
 <div class="step showQr">
   <div class="count"></div>
-  <div class="actionName">Open the Rung App</div>
+  <div class="actionName">Open the NFC Ring App</div>
   <div class="actionContents">Select "scan a QR code" then scan this QR code:
     <div id="qrCode"></div>
   </div>
@@ -94,10 +94,10 @@
   <div class="overlay"></div>
 </div>
 </div>
-<footer><a href="http://rung.io">Rung</a> NDEF Generator (c) McLear 2013</footer>
+<footer><a href="http://NFC Ring.io">NFC Ring</a> NDEF Generator (c) McLear 2013</footer>
 </div>
 <script type="text/javascript" src="js/jquery.qrcode.min.js"/></script>
-<script type="text/javascript" src="js/rung.js"/></script>
+<script type="text/javascript" src="js/nfcring.js"/></script>
 
 <script>
   // Nasty GA neccesary evil
@@ -106,7 +106,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-34066705-3', 'rung.io');
+  ga('create', 'UA-34066705-3', 'NFC Ring.io');
   ga('send', 'pageview');
 </script>
 
