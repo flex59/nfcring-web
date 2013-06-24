@@ -60,7 +60,7 @@
 
     <div class="container">
 
-      <h1>Hello <span id='showname'></span>.  First things first, some important information</h1>
+      <h1>Hello<span id='showname'></span>.  First things first, some important information</h1>
 	  
 	  <p>1. The ring you have is a different design to the final production ring.  You have a prototype ring that has a unique mark.  Please do not distribute images of the ring you have, instead please use the <a href="#images">high resolution rendered images provided</a>.</p>
 	  <p>2. We will be kickstarting this project on July the 20th at nfcring.com - Please ask us questions and feedback with your suggestions, we're here to help</p>
@@ -199,8 +199,9 @@
       return query_string;
     } ();
     var showname = document.getElementById("showname");
-	showname.innerHTML = QueryString.name
-	</script>
+    if(QueryString.name) showname.innerHTML = " "+QueryString.name;
+
+    </script>
 	
   </body>
 </html>
