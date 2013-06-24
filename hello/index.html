@@ -63,8 +63,8 @@
       <h1>Hello<span id='showname'></span>.  First things first, some important information</h1>
 	  
 	  <p>1. The ring you have is a different design to the final production ring.  You have a prototype ring that has a unique mark.  Please do not distribute images of the ring you have, instead please use the <a href="#images">high resolution rendered images provided</a>.</p>
-	  <p>2. We will be kickstarting this project on July the 20th at nfcring.com - Please ask us questions and feedback with your suggestions, we're here to help</p>
-          <p>3. You will want the <a href="https://play.google.com/store/apps/details?id=co.mclear.nfcring" target="_blank">NFC Ring app</a> to read and write functionality onto the ring.  If you are already familiar with some use cases for NFC then you should just get started playing around.</p>
+	  <p>2. We will be Kickstarting this project on July the 20th at nfcring.com - Please do ask questions and provide feedback, we're here to help.</p>
+          <p>3. You will want the <a href="https://play.google.com/store/apps/details?id=co.mclear.nfcring" target="_blank">NFC Ring app</a> to write new functionality onto your ring.  If you are already familiar with some use cases for NFC then you should just get started playing around, perhaps writing your social network url and impressing your friends.</p>
           <div id=about>
              <h1>About</h1>
              So, you should only be here if you have been given an NFC Ring.  Your Ring has unlimited possibilities.  Use it to unlock and open doors, share pictures, share social network links, share SSH Keys, unlock phones..  It's a long list, you get the idea :)
@@ -76,17 +76,21 @@
           </div>
 	  <div id=app>
             <h1>Get Started</h1>
-            <a href="https://play.google.com/store/apps/details?id=co.mclear.nfcring" target="_blank">Grab the NFC Ring app from the Play Store</a>
+            <a href="https://play.google.com/store/apps/details?id=co.mclear.nfcring" target="_blank">Grab the NFC Ring app from the Play Store</a>.  Once you have the app you can make your Ring do whatever you want it to do.
           </div>
 	  <h1 id=faq>Frequently asked questions</h1>
 
       <div class="qna">
         <div class="question">How did this ring come about?</div>
-        <div class="answer">The ring solves multiple problems but the initial core problem was that of security and access control.  The ring is an ideal replacement for house keys.  John McLear is the inventor of an NFC Ring, development took over a year as he wanted a ring with was relatively stealthy and this posed various challenges.  He also wanted the ring to be metal, plastic rings are really uncomfy.  The NFC Ring can be worn in all conditions(see ntag203 spec sheet), all year round.</div>
+        <div class="answer">The ring solves multiple problems but the initial core problem was that of security and access control.  The ring is an ideal replacement for house keys.  John McLear is the inventor of the NFC Ring, development took over a year as he wanted a ring with was stealthy enough to go unnoticed by his friends and colleagues.  He also wanted the ring to be metal, plastic rings are really uncomfy and have a tacky feel.  The NFC Ring can be worn in all conditions(see ntag203 spec sheet), all year round.</div>
       </div>
       <div class="qna">
         <div class="question">Which digital door locks work with the ring?</div>
         <div class="answer">Any NFC door lock will work however be mindful of cheep imitation door locks that don't have genuine NFC support.  We recommend the Samsung SHS-2421 as a good sub 100$ digital door lock that is easy to fit.</div>
+      </div>
+      <div class="qna">
+        <div class="question">How many rings can I wear?</div>
+        <div class="answer">As many as you want but we recommend having a gap between each finger so that the rings don't scratch against each other and do avoid Radio Crosstalk</div>
       </div>
       <div class="qna">
         <div class="question">What operating systems will be supported at Launch?</div>
@@ -98,7 +102,7 @@
       </div>
       <div class="qna">
         <div class="question">What operating systems will be supported after Launch?</div>
-        <div class="answer">We will set kickstarter targets where people can vote to get their OS supported.  The app is developed with Apache Cordova(PhoneGap) so supporting additional devices should be relatively trivial.</div>
+        <div class="answer">We will set Kickstarter targets where people can vote to get their OS supported.  The app is developed with Apache Cordova(PhoneGap) so supporting additional devices should be relatively trivial.</div>
       </div>
       <div class="qna">
         <div class="question">What other hardware devices can interact with the ring?</div>
@@ -106,7 +110,10 @@
       </div>
 	  <div class="qna">
         <div class="question">What's the status with unlocking my phone with the ring?</div>
-        <div class="answer">You can use third party software to achieve this however third party software is somewhat limited.  We will be setting Kickstarter targets for achieving this natively in Android</div>
+       <div class="answer">You can use third party software to achieve this however third party software is somewhat limited.  We will be setting Kickstarter targets for achieving this natively in Android.  
+<!--
+Their is a bit of a harsh reality with unlocking your phone and Android, Android has a few second latency before switching NFC on after you enable your screen.  This actually means that using the ring to unlock your phone is a bit of an inconvenience, trust us, we tried..</div>
+-->
       </div>
 	  <div class="qna">
         <div class="question">Why chose open source and what does it mean for the project?</div>
@@ -118,37 +125,37 @@
       </div>
       <div class="qna">
         <div class="question">What is the read distance?</div>
-        <div class="answer">~<1mm.  This is a feature not a bug.  You can't have any security if the inlays can be read from a distance.  We basically say that this is touch technology.</div>
+        <div class="answer">~<1mm.  This is a feature not a bug.  You can't have any security if the inlays can be read from a distance.  We basically say that this is "touch" technology.  Another note on this is that even if you have a really powerful antenna and try to read the inlay from a distance the inlays are programmed to generate cross talk which means it's impossible to know which inlay is delivering which bit..</div>
       </div>
       <div class="qna">
         <div class="question">How many rings currently exist?</div>
         <div class="answer">50 wood inlays, 1 completely clear, 100 or so prototypes (mostly 3d printed)</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">What can the ring be used for?</div>
         <div class="answer">Unlocking doors, Unlocking mobile phones, sharing URLS, sharing information.  John uses his for his digital door locks, to share contact information and as a replacement for his car ignition button</div>
       </div>
       <div class="qna">
         <div class="question">Who is behind the product?</div>
-        <div class="answer">John McLear, the founder of Primary Technology and the Etherpad Foundation and Matt Mullenweg, the founder of Wordpress(Automattik) and various other projects.</div>
+        <div class="answer">John McLear, the founder of Primary Technology and the Etherpad Foundation and Matt Mullenweg, the founder of Wordpress(Automattic) and various other projects.</div>
       </div>
       <div class="qna">
         <div class="question">What will the price be at launch?</div>
         <div class="answer">Ranging from 20$ to 600$</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">What size rings are available?</div>
         <div class="answer">Ring sizes 7 to 15</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">What is the storage capacity of each inlay in the ring?</div>
-        <div class="answer">144 bytes</div>
+        <div class="answer">144 bytes, 1152 bits of awesomeness.  34,952,533 rings would be needed to fill a CD of 600MB.</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">Is the inlay actual NFC and not an imitation?</div>
-        <div class="answer">Yes, we use the ntag203 chip</div>
+        <div class="answer">Yes, we use the NTAG203 chip</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">Can I purchase the 6mm inlay directly?</div>
         <div class="answer">Minimum order quantity of 100000 units</div>
       </div>
@@ -156,13 +163,13 @@
         <div class="question">What is the width of the ring?</div>
         <div class="answer">Roughly 7mm</div>
       </div>
-	  <div class="qna">
+      <div class="qna">
         <div class="question">Can the ring be used to make payments?</div>
-        <div class="answer">Not yet and this isn't on our roadmap</div>
+        <div class="answer">Not yet and this isn't on our roadmap, payments require a lot of encryption and security</div>
       </div>
- 	  <div class="qna">
+      <div class="qna">
         <div class="question">Is the data stored on the ring encrypted or secured?</div>
-        <div class="answer">Your physical security is the security, there is no encryption.  It is very similar to a door key.</div>
+        <div class="answer">Your physical security is the security, there is no encryption however encrypted data can be written to the ring.  It is very similar to a door key but with the option to be more secure should you choose.</div>
       </div>
       <div class="qna">
         <div class="question">Can I purchase rings in bulk for my exhibition/company or so?</div>
