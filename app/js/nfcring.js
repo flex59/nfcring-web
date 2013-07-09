@@ -143,7 +143,7 @@ function addActions(){
   $.each(actions, function(key, action) {
     debug(action);
     if(!action.image){ action.image = key.toLowerCase() + ".png"; };
-    $(".action > .actionContents > .rungActions").append("<a data-action="+key+" class=\"rungAction paddedIcon\"><img src=\"img/"+action.image+"\">"+action.label+"</a>");
+    $(".action > .actionContents > .NFCRingActions").append("<a data-action="+key+" class=\"rungAction paddedIcon\"><img src=\"img/"+action.image+"\">"+action.label+"</a>");
   });
   $('.action').show();
   $('html, body').animate({
