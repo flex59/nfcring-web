@@ -80,7 +80,7 @@ $(document).ready(function(){
     showCompleted("landing");
 	addActions();
   });
-  $("body").on('click', ".action > .actionContents > .rungActions > .rungAction", function(){
+  $("body").on('click', ".action > .actionContents > .NFCRingActions > .rungAction", function(){
     action = $(this).data("action");
     selectAction(action);
   });
