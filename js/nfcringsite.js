@@ -14,6 +14,9 @@ $(document).ready(function() {
 					width  : 80,
 					height : 80
 				}
+			},
+			beforeLoad: function() {
+				this.title = $(this.element).attr('caption');
 			}
 		});
 
