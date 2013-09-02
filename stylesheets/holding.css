@@ -297,6 +297,19 @@ header h2 span.right {
 }
 #social p { text-align:right; }
 
+#gallery {
+	padding-left:300px;
+	
+}
+#gallery .item {
+	float:left;
+	width:180px;
+	padding:10px;
+}
+#gallery .item img {
+	max-width:100%;
+}
+
 /* #Media Queries
 ================================================== */
 
@@ -337,6 +350,9 @@ header h2 span.right {
 	#mailing #mce-EMAIL { padding:1.5%; font-size: 1.1em; width:97%; }
 	#mailing .clear { float:none; width:100%; }
 	#mailing .button { width:100%; margin-bottom:20px; }
+	
+	#gallery { padding-left:0; text-align:center; }
+	#gallery .item { width:280px; }
 
 }
 
@@ -379,6 +395,8 @@ header h2 span.right {
 	#mailing .button { width:100%; margin-bottom:20px; }
 	
 	#social p { text-align:right; }
+	
+	#gallery { padding:150px 0 0 20px; }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
