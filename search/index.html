@@ -62,7 +62,7 @@
 // I wrote this as 4 in the morning so fuck off.
 $('.submit').click(function(){
 
-  var input = $('input').val();
+  var input = $('input').val().toLowerCase();
   var url = "http://ec2-54-200-230-69.us-west-2.compute.amazonaws.com/?email=";
   url = url + input + "&callback=?";
   $.getJSON(url, null);
