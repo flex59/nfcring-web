@@ -77,8 +77,10 @@ function resp(data){
     data = data.data;
     $('#search-results #showit').html("<h1>What we have stored</h1>");
     $.each(data.headers, function(key, value){
-      $('#search-results #showit').append("<b>" + value + ": ");
-      $('#search-results #showit').append(data[key].value + "<br/>");
+      if(data[key] && value){
+        $('#search-results #showit').append("<b>" + value + ": ");
+        $('#search-results #showit').append(data[key].value + "<br/>");  
+      }
     });
   }
 }
