@@ -38,7 +38,7 @@
                     <section>
                     		<form id="search-form" method="get" action="searchstuff">
 													<fieldset>
-														<input class="text" type="text" name="email" placeholder="Enter your kickstarter email" value="search">
+														<input class="text" type="text" name="email" placeholder="Enter your kickstarter email">
 														<input class="submit" type="submit" value="Search">
 													</fieldset>
                     		</form>
@@ -57,6 +57,32 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+<script type="text/javascript">
+// I wrote this as 4 in the morning so fuck off.
+$('.submit').click(function(){
+
+  var input = $('input').val();
+  var url = "http://ec2-54-200-230-69.us-west-2.compute.amazonaws.com/?email=";
+  url = url + input + "&callback=?";
+  $.getJSON(url, null);
+  return false;
+});
+
+function resp(data){
+  if(data.status == "fail"){
+    $('#search-results > p').html("Unable to find survey for this email address");
+  }else{
+    data = data.data;
+    $('#search-results > p').html("<h1>What we have stored</h1>");
+    $.each(data.headers, function(key, value){
+      $('#search-results > p').append("<b>" + value + ": ");
+      $('#search-results > p').append(data[key].value + "<br/>");
+    });
+  }
+}
+
+</script>
 
 
     </body>
