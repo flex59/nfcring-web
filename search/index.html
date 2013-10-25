@@ -46,7 +46,8 @@
                     
                     <section id="search-results">
                     
-                    	<p></p>
+                    	<div id="showit">
+                    	</div>
                     	
                     </section>
                 </article>
@@ -71,13 +72,13 @@ $('.submit').click(function(){
 
 function resp(data){
   if(data.status == "fail"){
-    $('#search-results > p').html("Unable to find survey for this email address");
+    $('#search-results #showit').html("Unable to find survey for this email address");
   }else{
     data = data.data;
-    $('#search-results > p').html("<h1>What we have stored</h1>");
+    $('#search-results #showit').html("<h1>What we have stored</h1>");
     $.each(data.headers, function(key, value){
-      $('#search-results > p').append("<b>" + value + ": ");
-      $('#search-results > p').append(data[key].value + "<br/>");
+      $('#search-results #showit').append("<b>" + value + ": ");
+      $('#search-results #showit').append(data[key].value + "<br/>");
     });
   }
 }
