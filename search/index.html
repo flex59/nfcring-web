@@ -36,7 +36,7 @@
                         If no data is returned, please double check your email address entered. Contact <a href="mailto:support@nfcring.com">support@nfcring.com</a> for further assistance.</p>
                     </header>
                     <section>
-                    		<form id="search-form" method="get" action="searchstuff">
+                    		<form id="search-form" name="searchForm" method="get" action="searchstuff">
 													<fieldset>
 														<input class="text" type="text" name="email" placeholder="Enter your kickstarter email">
 														<input class="submit" type="submit" value="Search">
@@ -61,8 +61,17 @@
 
 <script type="text/javascript">
 // I wrote this as 4 in the morning so fuck off.
-$('.submit').click(function(){
+$('.submit').click(function(event){
+  event.preventDefault();
+  var input = $('input').val().toLowerCase();
+  var url = "http://ec2-54-200-230-69.us-west-2.compute.amazonaws.com/?email=";
+  url = url + input + "&callback=?";
+  $.getJSON(url, null);
+  return false;
+});
 
+$(".submit").submit(function(event) {
+  event.preventDefault();
   var input = $('input').val().toLowerCase();
   var url = "http://ec2-54-200-230-69.us-west-2.compute.amazonaws.com/?email=";
   url = url + input + "&callback=?";
