@@ -64,6 +64,7 @@
 $('.submit').click(function(event){
   event.preventDefault();
   var input = $('input').val().toLowerCase();
+  input = encodeURIComponent(input);
   var url = "http://ec2-54-200-230-69.us-west-2.compute.amazonaws.com/?email=";
   url = url + input + "&callback=?";
   $.getJSON(url, null);
