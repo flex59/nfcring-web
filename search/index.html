@@ -64,6 +64,7 @@
 $('.submit').click(function(event){
   event.preventDefault();
   var input = $('input').val().toLowerCase();
+  input = encodeURIComponent(input);
   var url = "http://ec2-54-200-230-69.us-west-2.compute.amazonaws.com/?email=";
   url = url + input + "&callback=?";
   $.getJSON(url, null);
@@ -84,6 +85,7 @@ function resp(data){
     $('#search-results #showit').html("Unable to find survey for this email address");
   }else{
     data = data.data;
+    if(typeof(data) == "string")  data = JSON.parse(data);
     $('#search-results #showit').html("<h1>What we have stored</h1>");
     $.each(data.headers, function(key, value){
       if(data[key] && value){
