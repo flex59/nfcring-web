@@ -85,9 +85,20 @@ function resp(data){
     $('#search-results #showit').html("Unable to find survey for this email address");
   }else{
     data = data.data;
-    if(typeof(data) == "string")  data = JSON.parse(data);
+ console.log(data);
+// josh.erlich@gmail.com is fine
+// cghiltz@gmail.com is a problem
+
+    if(typeof(data) == "string"){
+      console.log("string");
+      data = JSON.parse(data);
+      var cake = true;
+    }
     $('#search-results #showit').html("<h1>What we have stored</h1>");
     $.each(data.headers, function(key, value){
+      if(cake){
+        key = key +1;
+      }
       if(data[key] && value){
         if(value != "First Name" && value != "Last Name"){
           $('#search-results #showit').append("<b>" + value + ": ");
