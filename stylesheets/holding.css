@@ -297,13 +297,14 @@ header h2 span.right {
 }
 #social p { text-align:right; }
 
-#gallery {
-	padding-left:300px;
-	
-}
+
+#gallery header h2 { font-style: normal; font-weight:bold; position:relative; left:auto; margin:0; text-align: center; width:auto; }
+#gallery #nfcring-logo { left: auto; position: relative;}
+#gallery #nfcring-logo img { position: relative;}
+#gallery h3 { font-size:1.2em; clear:both; text-align: center; }
 #gallery .item {
 	float:left;
-	width:180px;
+	width:173px;
 	padding:10px;
 }
 #gallery .item img {
