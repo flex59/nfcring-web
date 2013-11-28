@@ -1,0 +1,17 @@
+<body></body>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<script type="text/javascript"> 
+var guidStr = guid(); 
+$('#button').html('<a class="coinbase-button" data-custom="'+guidStr+'" data-code="6edebef486a6a45ce9fbcc5816e4d885" href="https://coinbase.com/checkouts/6edebef486a6a45ce9fbcc5816e4d885">Pay With Bitcoin</a>');
+
+function s4() {
+  return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+};
+
+function guid() {
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+}
+
+</script>
+<script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
