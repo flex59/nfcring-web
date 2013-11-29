@@ -305,6 +305,16 @@ img {
   font-size: 0.6em;
   padding: 10px;
 }
+#paid {
+  display: none;
+}
+#paid h2 {
+  font-size: 2.6em;
+}
+#paid h3 em {
+  color: #e63712;
+  font-weight: 600;
+}
 @media only screen and (min-width: 768px) {
   .starter {
     padding: 0 0 15em 0;
