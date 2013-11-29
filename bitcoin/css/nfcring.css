@@ -1,0 +1,12 @@
+body {
+  font-family: "effra", helvetica, sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+}
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  /* 	@import "lib/grid.less"; */
+}

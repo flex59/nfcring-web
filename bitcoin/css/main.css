@@ -61,13 +61,15 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font: 62.5% "effra", "Helvetica Neue", Helvetica, Arial;
 }
 
 .wrapper {
     width: 90%;
     margin: 0 5%;
 }
+
+
 
 /* ===================
     ALL: Orange Theme
