@@ -33,6 +33,6 @@ $(function() {
 
 $(document).on('coinbase_payment_complete', function(event, code){
 
-	$('.paid').click();
+	$('#paid').slideDown();
   $("#code").text(code);
 });
