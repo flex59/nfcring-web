@@ -205,6 +205,10 @@ img {
   font-weight: 300;
   font-size: 0.8em;
 }
+.rings .block span {
+  display: block;
+  font-size: 1.2em;
+}
 .rings .block img {
   display: inline-block;
 }
