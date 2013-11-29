@@ -1,0 +1,347 @@
+.starter {
+	overflow:hidden;
+	padding:0 0 1em 0;
+	
+	.block {
+		padding:0 1.5%;
+	}
+	
+	.intro {	
+		padding-top:2.5em;
+		
+		h1 {
+			font-size:2.6em;
+			font-weight:300;
+			color:@dark;
+			margin:0 0 1em 0;
+			padding:0;
+		}
+		
+		a {
+			display: inline-block;
+			max-width:290px;
+			
+			img {
+				
+			}
+		}
+	}
+	
+	.video {
+		text-align:center;
+		padding-top:2em;
+		width:96%;
+		
+		img {
+			display: inline-block;
+			cursor: pointer;
+			border:1px solid #c1c1c1;
+			
+		}
+		
+		.video-wrap {
+			max-width:530px;
+		}
+		
+		.video-container {
+			display: none;
+		  width: 100%;
+		  position: relative;
+		  height: 0;
+		  padding-bottom: 51%;
+
+			iframe {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		
+	}
+	
+	.btc-friday {
+		text-align:center;
+		
+		img {
+			display: inline-block;
+			max-width:60%;
+		}
+		
+		h3 {
+			font-size:2.2em;
+			font-weight: 500;
+			text-transform: uppercase;
+			line-height: 1.1em;
+			margin:5px 0;
+			padding:0;
+			
+			span {
+				display: block;
+				font-size:1.3em;
+				line-height: 0.9em;
+				color:@btcorange;
+				
+				em {
+					font-style: normal;
+					font-size:0.89em;
+					color:@dark;
+				}
+			}
+		}
+		a {
+			margin-top:10px;
+		}
+	}
+	
+}
+
+.rings {
+	background: @white;
+	padding-bottom:5em;
+	
+	.block {
+		padding:1.5%;
+		display: inline-block;
+		text-align: center;
+		margin:0;
+		border-bottom:1px solid @lgrey;
+		
+		h3 {
+			text-transform: uppercase;
+			margin:0 0 10px 0;
+			padding:0;
+			font-weight:500;
+			font-size:1.6em;
+		}
+		
+		img {
+			display: inline-block;
+		}
+	}
+	
+	.message {
+		clear:both;
+		text-align: center;
+		
+		span {
+			display:block;
+		}
+	}
+}
+
+.kickstarter {
+	background:@white;
+	
+	.wrap {
+		max-width:1000px;
+		text-align: center;
+		padding-bottom: 3em;
+		
+		a {
+			display: inline-block;
+			
+			img {
+				width:95%;
+				max-width:400px;
+				display: inline-block;
+			}
+		}
+	}
+	
+}
+
+
+.information {
+	.wrap {
+		overflow: hidden;
+		max-width: 980px;
+		padding:2em 0;
+	}
+	
+	.block {
+		padding:0 2.5%;
+		
+		h3 {
+			margin-bottom:0;
+			padding-bottom:0;
+		}
+		
+		p {
+			margin-top:10px;
+		}
+	}
+}
+
+
+.footer {
+	background: @dblue;
+	
+	.wrap {
+		padding:3em 0;
+		color:@white;
+		overflow: hidden;
+		max-width:980px;
+	}
+	
+	.block {
+		padding:0 2.5%;
+		
+		h3 {
+			margin-bottom:0;
+			padding-bottom:0;
+		}
+		
+		p {
+			margin-top:10px;
+		}
+	}
+	
+	.newsletter {
+		#mc_embed_signup { padding:0 2.5%; }
+		.mc-field-group { width:57%; float:left; }
+		#mce-EMAIL { padding:0.5em; font-size: 1.1em; width:95%; line-height:2em; border:0; .border-radius(3px);}
+		.button {
+			font-size:1.2em;
+			padding:0.8em 1.2em;
+		}
+		.clear { float:right; width:40%; }
+	}
+	
+	#social {
+		padding:25px 0 0 2.5%;
+		clear:both;
+	}
+	
+	.copyright {
+		clear:both;
+		background:#000;
+		text-align:center;
+		color:@grey;
+		font-size: 0.6em;
+		padding:10px;
+	}
+
+	
+}
+
+
+@media only screen and (min-width: 768px) {
+
+	.starter {
+		padding:0 0 15em 0;
+		.wrap {
+			max-width:1000px;
+		}
+		.block {
+			width:32%;
+			float:left;
+		}
+		
+		.intro {	
+			padding-top:5em;
+			
+			h1 {
+				font-size:2.6em;
+				margin:0 0 1em;
+				padding:0;
+			}
+			
+			a {
+				display: inline-block;
+				max-width:290px;
+				
+				img {
+					
+				}
+			}
+			
+			.btc-friday {
+				text-align: left;
+				
+				img {
+					max-width:120px;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				h3 {
+					display: inline-block;
+					vertical-align: middle;
+					margin-left:10px;
+				}
+			}
+		}
+	
+		.video {
+			text-align:right;
+			padding-top:4em;
+			width:60%;
+			
+			img {
+				display: inline-block;
+				cursor: pointer;
+				border:1px solid @lgrey;
+				
+			}
+		}
+	}
+	
+	.rings {
+		background: @white;
+		padding-bottom:3em;
+		
+		.block {
+			width:30%;
+			padding:1.5%;
+			display: inline-block;
+			text-align: center;
+			margin:-120px 0 0 0;
+			border:0;
+			
+			h3 {
+				text-transform: uppercase;
+				margin:0 0 10px 0;
+				padding:0;
+				font-weight:500;
+				font-size:1.6em;
+			}
+			
+			img {
+				display: inline-block;
+			}
+		}
+	}
+	
+
+	.information {
+		.wrap {
+			padding:5em 0;
+		}
+		
+		.block {
+			float:left;
+			width:45%;		
+		}
+	}
+	
+	.footer {
+	
+		.wrap {
+			padding:3em 0;
+		}
+		
+		.block {
+			float:left;
+			width:45%;
+			padding:0 2.5%;			
+		}
+		
+	}
+
+
+
+}
+
+
+

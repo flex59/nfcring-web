@@ -1,11 +1,393 @@
+h1 {
+  font-size: 2.8em;
+  font-weight: 400;
+}
+h2 {
+  font-size: 2.4em;
+  font-weight: 400;
+}
+h3 {
+  font-size: 2.4em;
+  font-weight: 400;
+}
+p {
+  font-size: 1.6em;
+  line-height: 1.3em;
+  font-weight: 300;
+}
+.button,
+.button:visited {
+  background: #e63712;
+  /*
+	border: 1px solid darken(@orange, 13%);
+	border-top-color: darken(@orange, 7%);
+	border-left-color: darken(@orange, 7%);
+*/
+
+  border: 0;
+  padding: 1em 2em;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+}
+.button:hover,
+.button:visited:hover,
+.button:focus,
+.button:visited:focus {
+  background-color: #ce3110;
+  color: #ffffff;
+  /*
+	  border: 1px solid darken(@orange, 13%);
+	  border-top-color: darken(@orange, 20%);
+	 	border-left-color: darken(@orange, 20%);
+*/
+
+}
+.button:active,
+.button:visited:active {
+  background-color: #a9280d;
+}
+/* CSS3 Transitions */
+/* Border radius */
 body {
   font-family: "effra", helvetica, sans-serif;
   font-size: 62.5%;
   font-weight: 400;
+  background: #ebecec;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
-.wrapper {
+.header .wrap {
+  overflow: hidden;
+  padding: 3em 1.5em;
+}
+.header .wrap .logo {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.header .wrap .logo img {
+  display: inline-block;
+  max-width: 220px;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.wrap {
   max-width: 1140px;
   margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    text-align: left;
+  }
+  .header .wrap {
+    max-width: 980px;
+    padding: 3em 1.5em;
+  }
+  .header .wrap .logo {
+    float: left;
+    width: 50%;
+    margin-bottom: 0;
+    padding: 1.5em 0 0 0;
+  }
+  .header .wrap .preorder {
+    float: right;
+    width: 30%;
+    padding-right: 1.5em;
+    text-align: right;
+  }
+}
+.starter {
+  overflow: hidden;
+  padding: 0 0 1em 0;
+}
+.starter .block {
+  padding: 0 1.5%;
+}
+.starter .intro {
+  padding-top: 2.5em;
+}
+.starter .intro h1 {
+  font-size: 2.6em;
+  font-weight: 300;
+  color: #162132;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+.starter .intro a {
+  display: inline-block;
+  max-width: 290px;
+}
+.starter .video {
+  text-align: center;
+  padding-top: 2em;
+  width: 96%;
+}
+.starter .video img {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #c1c1c1;
+}
+.starter .video .video-wrap {
+  max-width: 530px;
+}
+.starter .video .video-container {
+  display: none;
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding-bottom: 51%;
+}
+.starter .video .video-container iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.starter .btc-friday {
+  text-align: center;
+}
+.starter .btc-friday img {
+  display: inline-block;
+  max-width: 60%;
+}
+.starter .btc-friday h3 {
+  font-size: 2.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  margin: 5px 0;
+  padding: 0;
+}
+.starter .btc-friday h3 span {
+  display: block;
+  font-size: 1.3em;
+  line-height: 0.9em;
+  color: #f7931a;
+}
+.starter .btc-friday h3 span em {
+  font-style: normal;
+  font-size: 0.89em;
+  color: #162132;
+}
+.starter .btc-friday a {
+  margin-top: 10px;
+}
+.rings {
+  background: #ffffff;
+  padding-bottom: 5em;
+}
+.rings .block {
+  padding: 1.5%;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  border-bottom: 1px solid #c1c1c1;
+}
+.rings .block h3 {
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 1.6em;
+}
+.rings .block img {
+  display: inline-block;
+}
+.rings .message {
+  clear: both;
+  text-align: center;
+}
+.rings .message span {
+  display: block;
+}
+.kickstarter {
+  background: #ffffff;
+}
+.kickstarter .wrap {
+  max-width: 1000px;
+  text-align: center;
+  padding-bottom: 3em;
+}
+.kickstarter .wrap a {
+  display: inline-block;
+}
+.kickstarter .wrap a img {
+  width: 95%;
+  max-width: 400px;
+  display: inline-block;
+}
+.information .wrap {
+  overflow: hidden;
+  max-width: 980px;
+  padding: 2em 0;
+}
+.information .block {
+  padding: 0 2.5%;
+}
+.information .block h3 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.information .block p {
+  margin-top: 10px;
+}
+.footer {
+  background: #051b32;
+}
+.footer .wrap {
+  padding: 3em 0;
+  color: #ffffff;
+  overflow: hidden;
+  max-width: 980px;
+}
+.footer .block {
+  padding: 0 2.5%;
+}
+.footer .block h3 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.footer .block p {
+  margin-top: 10px;
+}
+.footer .newsletter #mc_embed_signup {
+  padding: 0 2.5%;
+}
+.footer .newsletter .mc-field-group {
+  width: 57%;
+  float: left;
+}
+.footer .newsletter #mce-EMAIL {
+  padding: 0.5em;
+  font-size: 1.1em;
+  width: 95%;
+  line-height: 2em;
+  border: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.footer .newsletter .button {
+  font-size: 1.2em;
+  padding: 0.8em 1.2em;
+}
+.footer .newsletter .clear {
+  float: right;
+  width: 40%;
+}
+.footer #social {
+  padding: 25px 0 0 2.5%;
+  clear: both;
+}
+.footer .copyright {
+  clear: both;
+  background: #000;
+  text-align: center;
+  color: #ebecec;
+  font-size: 0.6em;
+  padding: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .starter {
+    padding: 0 0 15em 0;
+  }
+  .starter .wrap {
+    max-width: 1000px;
+  }
+  .starter .block {
+    width: 32%;
+    float: left;
+  }
+  .starter .intro {
+    padding-top: 5em;
+  }
+  .starter .intro h1 {
+    font-size: 2.6em;
+    margin: 0 0 1em;
+    padding: 0;
+  }
+  .starter .intro a {
+    display: inline-block;
+    max-width: 290px;
+  }
+  .starter .intro .btc-friday {
+    text-align: left;
+  }
+  .starter .intro .btc-friday img {
+    max-width: 120px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .starter .intro .btc-friday h3 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  .starter .video {
+    text-align: right;
+    padding-top: 4em;
+    width: 60%;
+  }
+  .starter .video img {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #c1c1c1;
+  }
+  .rings {
+    background: #ffffff;
+    padding-bottom: 3em;
+  }
+  .rings .block {
+    width: 30%;
+    padding: 1.5%;
+    display: inline-block;
+    text-align: center;
+    margin: -120px 0 0 0;
+    border: 0;
+  }
+  .rings .block h3 {
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 1.6em;
+  }
+  .rings .block img {
+    display: inline-block;
+  }
+  .information .wrap {
+    padding: 5em 0;
+  }
+  .information .block {
+    float: left;
+    width: 45%;
+  }
+  .footer .wrap {
+    padding: 3em 0;
+  }
+  .footer .block {
+    float: left;
+    width: 45%;
+    padding: 0 2.5%;
+  }
 }
 @media only screen and (min-width: 768px) {
   /* 	@import "lib/grid.less"; */

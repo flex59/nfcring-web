@@ -2,9 +2,75 @@ body {
 	font-family: "effra", helvetica, sans-serif;
 	font-size:62.5%;
 	font-weight:400;
+	background: @grey;
+	padding:0;
+	margin: 0;
+	text-align: center;
 }
 
-.wrapper {
+.header {
+
+	.wrap {
+		overflow: hidden;
+			padding:3em 1.5em;
+	
+		.logo {
+			padding:0;
+			margin-bottom: 20px;
+			
+			img {
+				display: inline-block;
+				max-width: 220px;
+			}
+		}
+		
+		.preorder {
+		}
+	}
+}
+
+img {
+	max-width:100%;
+	display: block;
+}
+
+.wrap {
 	max-width:1140px;
 	margin:0 auto;
 }
+
+
+
+@media only screen and (min-width: 768px) {
+
+	body {
+		text-align:left;
+	}
+	
+	.header {
+	
+		.wrap {
+			max-width:980px;
+			padding:3em 1.5em;
+		
+			.logo {
+				float:left;
+				width: 50%;
+				margin-bottom: 0;
+				padding:1.5em 0 0 0;
+				
+			}
+			
+			.preorder {
+				float:right;
+				width:30%;
+				padding-right:1.5em;
+				text-align: right;
+			}
+		}
+	}
+	
+
+}
+
+
