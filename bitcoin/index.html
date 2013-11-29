@@ -9,6 +9,7 @@
 		<script type="text/javascript" src="http://use.typekit.net/zzq3jqd.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<link rel="stylesheet" type="text/css" href="css/nfcring.css" media="screen" />
+		<link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css" media="screen" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -38,13 +39,8 @@
 	  		</div>
 	  		
 	  		<div class="video block">
-		  		<div onclick="thevid=document.getElementById('video'); thevid.style.display='block'; this.style.display='none'">
-		  			<img src="img/video-thumb.jpg" alt="Watch the video">
-		  		</div>
 		  		<div class="video-wrap">
-						<div id="video" class="video-container">
-							<iframe width="853" height="480" src="//www.youtube.com/embed/bqvQ0pZhEBY?rel=0" frameborder="0" allowfullscreen></iframe>
-						</div>
+		  			<a class="popup" data-fancybox-type="iframe" href="//www.youtube.com/embed/bqvQ0pZhEBY?rel=0"><img src="img/video-thumb.jpg" alt="Watch the video"></a>
 		  		</div>
 	  		</div>
   		</div>
@@ -60,7 +56,7 @@
 				</div>
 				
 				<div class="ring block" id="nfcring-alpha">
-					<img src="img/nfcring-classic.png" alt="Alpha NFC Ring">
+					<img src="img/nfcring-alpha.png" alt="Alpha NFC Ring">
 					<h3>Alpha</h3>
 					<a class="coinbase-button" data-code="69d6df19f342acfda1ec6f27baeb2886" href="https://coinbase.com/checkouts/69d6df19f342acfda1ec6f27baeb2886">Pre-order now</a>
 				</div>
@@ -72,7 +68,11 @@
 				</div>
   		</div>
   		
-  		<h3 class="message">0.06BTC - TODAY ONLY EXCLUSIVE <span>Ships January 2014</span></h3>
+  		<div class="message">
+	  		<h3>0.06BTC - TODAY ONLY EXCLUSIVE <span>Free shipping anywhere in the world</span></h3>
+	  		<p>Ships January 2014</p>
+  		</div>
+  		
 		</section>
 		
 		<section class="kickstarter">
@@ -153,6 +153,10 @@
 		</footer>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="../js/fancybox/jquery.fancybox.pack.js"></script>
+		<script src="js/fluidvids.min.js"></script>
+		<script src="js/jquery.smooth-scroll.min.js"></script>
+		<script src="js/main.js"></script>
 		<script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
     <script type="text/javascript">
 		  var _gaq = _gaq || [];

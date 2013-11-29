@@ -2,6 +2,10 @@
 	overflow:hidden;
 	padding:0 0 1em 0;
 	
+	.wrap {
+		max-width:1015px;
+	}
+	
 	.block {
 		padding:0 1.5%;
 	}
@@ -28,7 +32,7 @@
 	}
 	
 	.video {
-		text-align:center;
+		text-align:right;
 		padding-top:2em;
 		width:96%;
 		
@@ -40,25 +44,14 @@
 		}
 		
 		.video-wrap {
-			max-width:530px;
-		}
-		
-		.video-container {
-			display: none;
-		  width: 100%;
-		  position: relative;
-		  height: 0;
-		  padding-bottom: 51%;
-
-			iframe {
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 100%;
-				height: 100%;
+			img {
+				max-width:580px;
 			}
 		}
 		
+		a {
+			display:inline-block;
+		}
 	}
 	
 	.btc-friday {
@@ -127,6 +120,10 @@
 		
 		span {
 			display:block;
+		}
+		
+		p {
+			font-size:2em;
 		}
 	}
 }
@@ -282,7 +279,6 @@
 				display: inline-block;
 				cursor: pointer;
 				border:1px solid @lgrey;
-				
 			}
 		}
 	}
