@@ -182,6 +182,9 @@ img {
 .starter .btc-friday a {
   margin-top: 10px;
 }
+#notice {
+  display: none;
+}
 .rings {
   background: #ffffff;
   padding-bottom: 5em;
@@ -208,6 +211,9 @@ img {
 .rings .block span {
   display: block;
   font-size: 1.2em;
+}
+.rings .block span a {
+  color: #e63712;
 }
 .rings .block img {
   display: inline-block;
