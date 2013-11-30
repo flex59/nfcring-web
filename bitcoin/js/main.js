@@ -42,6 +42,8 @@ $(function() {
 
 //	$.getScript("https://coinbase.com/assets/button.js");
 	
+	
+
 
 });
 
@@ -49,3 +51,5 @@ $(document).on('coinbase_payment_complete', function(event, code){
   $('#paid').slideDown();
   $("#code").text(code);
 });
+
+
