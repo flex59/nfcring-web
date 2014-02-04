@@ -1,0 +1,50 @@
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<div id="apps">
+  <div id="control">
+    <div class="title">NFC Ring Control</div>
+    <div class="description">
+      Read from and Write to your NFC Ring. Create links to your favorite social network profile or read your current NFC Ring.
+    </div>
+    <div class="app">
+      <a class="wp" href="http://www.windowsphone.com/en-us/store/app/nfc-ring-control/8be8a486-6360-4f02-af3e-8f81e7660cd5">Windows Phone NFC Ring Control</a>
+    </div>
+    <div class="app">
+      <a class="android" href="https://play.google.com/store/apps/details?id=co.mclear.nfcringpro&hl=en_GB">Android NFC Ring Control</a>
+    </div>
+  </div>
+  <div id="unlock">
+    <div class="title">NFC Ring Unlock</div>
+    <div class="description">
+      Unlock your Phone or Tablet by holding your NFC Ring on your Phones NFC Sweet Spot.
+    </div>
+    <div class="app">
+      <a class="android" href="https://play.google.com/store/apps/details?id=co.mclear.nfcringunlockpro&hl=en_GB">Android NFC Ring Unlock</a>
+    </div>
+  </div>
+</div>
+<script>
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+if(isAndroid) {
+  // show android links..
+  $('.wp').hide();
+}
+var isWP = ua.indexOf("Windows Phone") > -1; //&& ua.indexOf("mobile");
+if(isWP) {
+  $('.android').hide(); // show windows phone links and hide android links and also #unlock
+  $('#unlock').hide();
+}
+</script>
+
+<style type"text/css">
+/* Insert CSS rules here... */
+body{
+  text-align:center;
+}
+</style>
+</body>
+</html>
