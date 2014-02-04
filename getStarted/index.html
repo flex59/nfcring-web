@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NFC Ring - Safe, Simple, Secure. || NFC Ring - One smart ring, unlimited possibilities || Get Started</title>
     <meta name="description" content="Getting Started with your NFC Ring">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="http://use.typekit.net/zzq3jqd.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<link rel="stylesheet" type="text/css" href="../stylesheets/base.css" media="screen" />
@@ -37,7 +38,7 @@
 			  	<h2 class="clear">Next Steps</h2>
 					<div class="block">
 						<p>I want to use my NFC Ring to share a link to an online profile page or some other information</p>
-						<div class="device-android"><a href="https://play.google.com/store/apps/details?id=co.mclear.nfcringpro&hl=en_GB" class="btn">Get our Control app</a></div>
+						<div class="device-android">arr<a href="https://play.google.com/store/apps/details?id=co.mclear.nfcringpro&hl=en_GB" class="btn">Get our Control app</a></div>
 						<div class="device-wp"><a href="http://www.windowsphone.com/en-gb/store/app/nfc-ring-control/8be8a486-6360-4f02-af3e-8f81e7660cd5" class="btn">Get our Control app</a></div>
 		    	</div>
 
@@ -84,15 +85,14 @@
 		  // show android links..
 		  $('.device-wp').hide();
 		}
-		var isWP = ua.indexOf("Windows Phone") > -1; //&& ua.indexOf("mobile");
+		var isWP = ua.indexOf("windows phone") > -1; //&& ua.indexOf("mobile");
 		if(isWP) {
-			$('.device-wp').show();
+		  $('.device-wp').show();
 		  $('.device-android').hide(); // show windows phone links and hide android links and also #unlock
 		  $('#unlock').hide();
 		}
 		</script>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="../js/generalpages.js"></script>
     <script type="text/javascript">
 		  var _gaq = _gaq || [];
