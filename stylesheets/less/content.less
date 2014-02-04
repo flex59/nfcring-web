@@ -29,6 +29,7 @@ body {
 	}
 }
 
+
 img {
 	max-width:100%;
 	display: block;
@@ -37,6 +38,16 @@ img {
 .whitebg { background: @white; }
 .device-wp { display: none; }
 .clear { clear:both; }
+#unlock.clear { border-top:1px solid #ccc; max-width:900px; margin:0 auto; }
+
+.align-right {
+	text-align: center;
+	
+	img {
+		display: inline-block;
+	}
+}
+
 
 .addthis_toolbox { display: inline-block; }
 
@@ -51,6 +62,17 @@ img {
 	
 	.block {
 		padding:0 1.5%;
+		
+		&.third {
+			padding-top:2em;
+			text-align:center;
+			
+			img {
+				display: inline-block;
+			}
+		}
+		
+		
 	}
 	
 	.intro {
