@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NFC Ring - Safe, Simple, Secure. || NFC Ring - One smart ring, unlimited possibilities || Get Started</title>
     <meta name="description" content="Getting Started with your NFC Ring">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="http://use.typekit.net/zzq3jqd.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<link rel="stylesheet" type="text/css" href="../stylesheets/base.css" media="screen" />
@@ -21,34 +20,37 @@
 	  		<div class="logo">
 		  		<img src="../img/nfcring-logo.png" alt="NFC Ring">
 	  		</div>
+	  		<h1>Our Apps</h1>	
   	</header>
-  	
-  	<section class="starter">
-  		<div class="wrap intro">
-		  		<h1>Congratulations!</h1>				
-					<h2>You found your device's Sweet Spot</h2>
-					<div class="block">
-			  		<p>Your NFC Ring can already do loads of different awesome things and to make it easier we provide <span class="device-wp">an app</span><span class="device-android">some apps</span> for your phone</p>
-					</div>
-					<div class="block">
-						<p>Thank you for joining the NFC Ring Journey, we really appreciate your support and we look forward to hearing about the amazing things you do with your NFC Ring.</p>
-					</div>
-				
-			  	<h2 class="clear">Next Steps</h2>
-					<div class="block">
-						<p>I want to use my NFC Ring to share a link to an online profile page or some other information</p>
-						<div class="device-android">arr<a href="https://play.google.com/store/apps/details?id=co.mclear.nfcringpro&hl=en_GB" class="btn">Get our Control app</a></div>
-						<div class="device-wp"><a href="http://www.windowsphone.com/en-gb/store/app/nfc-ring-control/8be8a486-6360-4f02-af3e-8f81e7660cd5" class="btn">Get our Control app</a></div>
-		    	</div>
 
-					<div class="block">
-						<div id="unlock">
-							<p>I want to use my NFC Ring to unlock my device <br>(Android only)</p>
-							<a href="https://play.google.com/store/apps/details?id=co.mclear.nfcringunlockpro&hl=en_GB" class="btn">Get our Unlock app</a>
-						</div>
-		    	</div>
-	    	
+  	<section class="starter">
+  		<div class="wrap intro">			
+					<div class="block third device-android">
+						<img src="../img/apps-control-android.png" alt="NFC Ring Control App">
+					</div>
+					<div class="block third device-wp">
+						<img src="../img/apps-control-windows.png" alt="NFC Ring Control App">
+					</div>
+					<div class="block two-thirds">
+						<h2>NFC Ring Control</h2>
+			      <p>Read from and Write to your NFC Ring. Create links to your favorite social network profile or read your current NFC Ring.</p>
+			      <div class="device-android"><a href="https://play.google.com/store/apps/details?id=co.mclear.nfcringpro&hl=en_GB" class="btn">Get our Control app</a></div>
+						<div class="device-wp"><a class="wp" href="http://www.windowsphone.com/en-us/store/app/nfc-ring-control/8be8a486-6360-4f02-af3e-8f81e7660cd5">Windows Phone NFC Ring Control</a></div>
+					</div>
   		</div>
+
+			<div id="unlock" class="clear">
+	  		<div class="wrap intro">
+						<div class="block two-thirds">
+							<h2>NFC Ring Unlock</h2>
+							<p>Unlock your Phone or Tablet by holding your NFC Ring on your Phones NFC Sweet Spot.</p>
+							<div class="device-android"><a class="btn" href="https://play.google.com/store/apps/details?id=co.mclear.nfcringunlockpro&hl=en_GB">Android NFC Ring Unlock</a></div>
+						</div>
+						<div class="block third align-right">
+							<img src="../img/apps-unlock-android.png" alt="NFC Ring Control App">
+						</div>
+	  		</div>
+			</div>
   	</section>
 
 		<section class="information whitebg socialblocks">
@@ -84,14 +86,15 @@
 		  // show android links..
 		  $('.device-wp').hide();
 		}
-		var isWP = ua.indexOf("windows phone") > -1; //&& ua.indexOf("mobile");
+		var isWP = ua.indexOf("Windows Phone") > -1; //&& ua.indexOf("mobile");
 		if(isWP) {
-		  $('.device-wp').show();
+			$('.device-wp').show();
 		  $('.device-android').hide(); // show windows phone links and hide android links and also #unlock
 		  $('#unlock').hide();
 		}
 		</script>
 
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="../js/generalpages.js"></script>
     <script type="text/javascript">
 		  var _gaq = _gaq || [];

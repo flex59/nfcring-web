@@ -691,6 +691,17 @@ img {
 .clear {
   clear: both;
 }
+#unlock.clear {
+  border-top: 1px solid #ccc;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.align-right {
+  text-align: center;
+}
+.align-right img {
+  display: inline-block;
+}
 .addthis_toolbox {
   display: inline-block;
 }
@@ -704,6 +715,13 @@ img {
 }
 .starter .block {
   padding: 0 1.5%;
+}
+.starter .block.third {
+  padding-top: 2em;
+  text-align: center;
+}
+.starter .block.third img {
+  display: inline-block;
 }
 .starter .intro {
   padding-bottom: 25px;
@@ -938,11 +956,15 @@ img {
     margin-bottom: 0;
     padding: 1.5em 0 0 0;
   }
-  .header .wrap .preorder {
+  .header .wrap h1 {
     float: right;
-    width: 30%;
+    width: 40%;
     padding-right: 1.5em;
     text-align: right;
+    font-size: 2.6em;
+    margin: 0 0 .25em 0;
+    padding: 0;
+    font-weight: 300;
   }
   .starter {
     padding: 0 0 5em 0;
@@ -952,13 +974,21 @@ img {
     float: left;
     padding: 0 3% 0 0;
   }
+  .starter .block.third {
+    width: 30%;
+    text-align: left;
+  }
+  .starter .block.third.align-right {
+    text-align: right;
+  }
+  .starter .block.third img {
+    display: inline-block;
+  }
+  .starter .block.two-thirds {
+    width: 63%;
+  }
   .starter .intro {
     padding-top: 2em;
-  }
-  .starter .intro h1 {
-    font-size: 2.6em;
-    margin: 0 0 .25em 0;
-    padding: 0;
   }
   .starter .intro h2 {
     padding: 0;
