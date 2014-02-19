@@ -1,0 +1,129 @@
+.button, .button:visited {
+	background: @orange;
+/*
+	border: 1px solid darken(@orange, 13%);
+	border-top-color: darken(@orange, 7%);
+	border-left-color: darken(@orange, 7%);
+*/
+	border:0;
+	padding: 1em 2em;
+	color: @white;
+	display: inline-block;
+	font-size: 1.8em;
+	font-weight: 700;
+	text-decoration: none;
+	cursor: pointer;
+	.transition();
+	.border-radius(3px);
+	text-transform: uppercase;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-appearance: none;
+
+	&:hover, &:focus {
+		background-color: darken(@orange, 5%);
+		color: @white;
+/*
+	  border: 1px solid darken(@orange, 13%);
+	  border-top-color: darken(@orange, 20%);
+	 	border-left-color: darken(@orange, 20%);
+*/
+	}
+	
+	&:active {
+		background-color: darken(@orange, 13%);
+	}	
+}
+
+/* CSS3 Transitions */
+.transition(@what: all, @time: 0.2s, @transition: ease-in-out) {
+	-webkit-transition: @what @time @transition;
+	-moz-transition:    @what @time @transition;
+	-ms-transition:     @what @time @transition;
+	-o-transition:      @what @time @transition;
+	transition:         @what @time @transition;
+}
+
+.transform(@string){
+	-webkit-transform: @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+.scale (@factor) {
+	-webkit-transform: scale(@factor);
+	-moz-transform: 	 scale(@factor);
+	-ms-transform: 		 scale(@factor);
+	-o-transform: 		 scale(@factor);
+}
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+.skew (@deg, @deg2) {
+	-webkit-transform:       skew(@deg, @deg2);
+	-moz-transform: 	 skew(@deg, @deg2);
+	-ms-transform: 		 skew(@deg, @deg2);
+	-o-transform: 		 skew(@deg, @deg2);
+}
+.translate (@x, @y:0) {
+	-webkit-transform:       translate(@x, @y);
+	-moz-transform: 	 translate(@x, @y);
+	-ms-transform: 		 translate(@x, @y);
+	-o-transform: 		 translate(@x, @y);
+}
+.translate3d (@x, @y: 0, @z: 0) {
+	-webkit-transform:       translate3d(@x, @y, @z);
+	-moz-transform: 	 translate3d(@x, @y, @z);
+	-ms-transform: 		 translate3d(@x, @y, @z);
+	-o-transform: 		 translate3d(@x, @y, @z);
+}
+
+
+//  .backface-visibility
+.backface-visibility(@visibility){
+  -webkit-backface-visibility: @visibility;
+     -moz-backface-visibility: @visibility;
+          backface-visibility: @visibility;
+}
+
+/* Border radius */
+.border-radius(@radius: 4px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.border_radius_right(@radius:4px) {
+	-webkit-border-top-right-radius: @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-topright: @radius;
+	-moz-border-radius-bottomright: @radius;
+	border-top-right-radius: @radius;
+	border-bottom-right-radius: @radius;
+}
+.border_radius_left(@radius:4px) {
+	-webkit-border-top-left-radius: @radius;
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-radius-topleft: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	border-top-left-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+.border_radius_bottom(@radius:4px) {
+	-webkit-border-bottom-left-radius: @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	-moz-border-radius-bottomright: @radius;
+	border-bottom-left-radius: @radius;
+	border-bottom-right-radius: @radius;
+}
+.border_radius_top(@radius:4px) {
+	-webkit-border-top-left-radius: @radius;
+	-webkit-border-top-right-radius: @radius;
+	-moz-border-radius-topleft: @radius;
+	-moz-border-radius-topright: @radius;
+	border-top-left-radius: @radius;
+	border-top-right-radius: @radius;
+}
