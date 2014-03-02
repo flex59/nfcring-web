@@ -1,0 +1,90 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//www.parsecdn.com/js/parse-1.2.17.min.js"></script>
+</head>
+<body>
+<div id="container" style="max-width:666px;margin:auto;">
+<div style="text-align:center;margin:40px;">
+<img src="http://nfcring.com/img/nfcring-logo.png" style="max-width:100%;">
+<br/>
+<h1>Ring Inlay Color Change from Fiber</h1>
+</div>
+<b>
+You ordered an NFC Ring that had 
+<span class='bf' style="display:none;">Black Fiber on one side and Black on the other</span>
+<span class='sf' style="display:none;">Silver Fiber on one side and White on the other.</span>
+Due to this we need to change the Fiber side of your ring to another color
+</b>
+<br/>
+
+<i>Note: If you ordered multiple <span class='bf' style="display:none;">black fiber</span><span class='sf' style="display:none;">silver fiber</span> rings they will all be changed to the same color choice so only submit this form once.  If you also had other fiber color inlay choices you will receive two emails</i>
+<br/>
+<!--
+<h2>Inlay Cover Color Options</h2>
+-->
+<img width="100%" src="https://s3.amazonaws.com/ksr/assets/001/697/191/5a4e0b7091facb2bbee074f2b594aa69_large.png?1393793370" title="ring choices">
+
+<h2 style="text-align:center;">
+Which color option do you want?
+</h2>
+<form style="text-align:center;">
+<select id="choice" style="font-size:28px;">
+  <option value="W">White</option>
+  <option value="B">Black</option>
+  <option value="T">Transparent</option>
+</select> 
+<input id="submit" type="submit" style="font-size:28px;" value="Submit choice">
+</form>
+
+</div>
+
+<script type="text/javascript">
+/* I AM JAVASCRIPT I EAT YOUR MEMORIES -- 
+This was written scrambling late one nite, this isn't good code so please feel free to fix it
+I have a few jobs here..  
+ - Firstly I get the previous color & urlencoded email addy from the URL, this is far from ideal from a security perspective.
+ - Secondly I initiate a connection to parse
+ - Thirdly on forum submit I submit the data to parse.
+*/
+
+// Get email.  Again to stress this is horrible.
+var email = getURLParameter("e");
+var preColor = getURLParameter("preColor");
+
+// Update UI to only show preColor stuff..
+if(preColor == "BF"){
+  $('.bf').show();
+}
+if(preColor == "SF"){
+  $('.sf').show();
+}
+
+// Init Parse
+Parse.initialize("hWWmMMj27hwvYxThHyteFRr1s2hWtw1tpUnkQlSg", "WGcz0x2T4ylCoZga43c5d7Xi2wwiIzKP8JXYqlWJ");
+
+// Listen for Submit
+$('form').submit(function(event){
+  poopOnParse();
+  event.preventDefault();
+});
+
+// Pass submitted data to parse..
+function poopOnParse(){
+  var color = $('#choice option:selected').val();
+  var TestObject = Parse.Object.extend("TestObject");
+  var testObject = new TestObject();
+  testObject.save({email: email, "silverOrBlack":preColor, newColor:color}).then(function(object) {
+    alert("Yay! Thanks we recieved your choice.  You can now close this window.");
+  });
+}
+
+function getURLParameter(name) {
+  return decodeURI(
+    (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+  );
+}
+
+</script>
+</body>
+</html>
