@@ -132,6 +132,7 @@ p a {
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
   box-sizing: border-box;
+  text-decoration: none;
 }
 .button:hover {
   background: #c22c0d;
@@ -203,9 +204,13 @@ section {
   padding: 60px 0 60px 0;
 }
 #preorders h2 {
-  font-size: 2.4em;
+  font-size: 3.4em;
   text-transform: uppercase;
   margin:0;
+}
+p.sublink a {
+  text-decoration: none;
+  text-transform: uppercase;
 }
 #preorders .mailing-form {
   max-width: 520px;
@@ -228,6 +233,12 @@ section {
 #preorders .button {
   width: 100%;
   margin: 1px 0 0 0;
+}
+#preorders .button {
+  margin:0 auto;
+  float:none!important;
+  font-size: 2.4em;
+  text-transform: uppercase;
 }
 
 #content {
@@ -347,8 +358,12 @@ section {
     width: 320px;
   }
   #preorders .button {
-    float:right;
-    width: 160px;
+/*     float:right; */
+/*     width: 160px; */
+    max-width:260px;
+  }
+  #preorders .button:hover {
+    color:#fff;
   }
 
   .block {
