@@ -198,6 +198,52 @@ section {
   width:100%;
 }
 
+/* GENERAL PAGE STYLES FOR OTHER PAGES - EG: RETURNS */
+.general .standard {
+  background: #eaeaea;
+  padding: 30px 0;
+}
+
+.general .standard-white {
+  background: #fff;
+}
+
+.general #nfcring-logo {
+  width:200px;
+  margin:0 auto 30px auto;
+  
+}
+
+.general .standard h1 {
+  font-size:3em;
+  color:#303030;
+  font-weight:400;
+  margin-bottom:20px;
+}
+
+.general .standard ul {
+  list-style: disc;
+  font-weight: 300;
+  font-size: 1.6em;
+  margin:20px 0 20px 20px;
+}
+
+.general .standard ul li {
+  margin:0 0 10px 0;
+}
+
+.general .standard ul li strong {
+  font-weight:400;
+}
+
+.general .standard ul ul {
+  list-style: circle;
+  font-size:1em;
+  margin:10px 0 0 20px;
+}
+
+/* END GENERAL STYLES */
+
 #preorders {
   background: #eaeaea;
   text-align: center;
