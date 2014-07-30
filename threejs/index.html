@@ -26,7 +26,7 @@
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 0.5, window.innerWidth / window.innerHeight, 1e-1, 1e4 );
+				camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1e-1, 1e4 );
 				camera.position.set( 0.1, 1, 0.8 );
 
 				cameraTarget = new THREE.Vector3( 0,0,0 );
@@ -68,7 +68,7 @@
 					mesh.position.set( 0, 0, 0 );
 					mesh.rotation.set( .8, 0, 0 );
 
-					mesh.scale.set( 1, 1, 1 );
+					mesh.scale.set( 40, 40, 40 );
 					mesh.castShadow = true;
 					mesh.receiveShadow = true;
 					scene.add( mesh );
@@ -93,7 +93,7 @@
 					mesh.position.set( 0, 0, 0 );
 					mesh.rotation.set( .8, 0, 0 );
 
-					mesh.scale.set( 1, 1, 1 );
+					mesh.scale.set( 40, 40, 40 );
 					mesh.castShadow = true;
 					mesh.receiveShadow = true;
 					scene.add( mesh );
@@ -118,7 +118,7 @@
 					mesh.position.set( 0, 0, 0 );
 					mesh.rotation.set( .8, 3.142, 0 );
 
-					mesh.scale.set( 1, 1, 1 );
+					mesh.scale.set( 40, 40, 40 );
 					mesh.castShadow = true;
 					mesh.receiveShadow = true;
 					scene.add( mesh );
