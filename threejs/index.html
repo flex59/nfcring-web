@@ -53,45 +53,34 @@
 				var loader = new THREE.STLLoader();
 				loader.addEventListener( 'load', function ( event ) {
 
-				var geometry = event.content;
-				var r = "./";
-				var urls = [ r + "px.jpg", r + "nx.jpg",
-							 r + "py.jpg", r + "ny.jpg",
-							 r + "pz.jpg", r + "nz.jpg" ];
-
-//				var textureCube = THREE.ImageUtils.loadTextureCube( urls );
-
+					var geometry = event.content;
 					var material = new THREE.MeshPhongMaterial( {
-							color: 0x000000,
-							specular:0xffffff,
-							combine: THREE.MultiplyOperation,
-							shininess: 4,
-							shading: THREE.SmoothShading,
-							reflectivity: 1
+						color: 0x000000,
+						specular:0xffffff,
+						combine: THREE.MultiplyOperation,
+						shininess: 4,
+						shading: THREE.SmoothShading,
+						reflectivity: 1
 					} )
-//							envMap: textureCube
-
 
 					var mesh = new THREE.Mesh( geometry, material );
-
+	
 					mesh.position.set( 0, 0, 0 );
 					mesh.rotation.set( .8, 0, 0 );
 
 					mesh.scale.set( 1, 1, 1 );
-
 					mesh.castShadow = true;
 					mesh.receiveShadow = true;
-
 					scene.add( mesh );
-
 				} );
+
 				loader.load( './4-5.stl' );
 
 				// Lights
 
 				scene.add( new THREE.AmbientLight( 0x777777 ) );
 
-//				addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
+				addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
 				addShadowedLight( 0.5, 1, 0.1, 0xffffff, 1 );
 
 				// renderer
@@ -99,7 +88,7 @@
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
-//				renderer.setClearColor( scene.fog.color, 1 );
+				renderer.setClearColor( scene.fog.color, 1 );
 
 				renderer.gammaInput = true;
 				renderer.gammaOutput = true;
