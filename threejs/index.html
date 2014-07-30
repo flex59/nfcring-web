@@ -3,6 +3,7 @@
 <script src="three.min.js"></script>
 <script src="STLLoader.js"></script>
 <script src="Detector.js"></script>
+<script src="TrackballControls.js"></script>
 
 </head>
 
@@ -16,15 +17,12 @@
 			var camera, cameraTarget, scene, renderer;
                         var windowHalfX = 0;
                         var windowHalfY = 0;
-			var mouseX = 0;
-			var mouseY = 0;
 
 			init();
 			animate();
 
 			function init() {
 
-				document.addEventListener('mousemove', onDocumentMouseMove, false);
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
@@ -42,7 +40,7 @@
 
 				var plane = new THREE.Mesh( new THREE.PlaneGeometry( 20, 30 ), new THREE.MeshPhongMaterial( { ambient: 0xffffff, color: 0xffffff, specular: 0xffffff } ) );
 				plane.rotation.x = -Math.PI/2;
-				plane.position.y = -0.3;
+				plane.position.y = -0.4;
 				scene.add( plane );
 
 				plane.receiveShadow = true;
@@ -150,24 +148,37 @@
 
 				window.addEventListener( 'resize', onWindowResize, false );
 
+				controls = new THREE.TrackballControls( camera );
+				controls.target.set( 0, 0, 0 );
+
+				controls.rotateSpeed = 0.5;
+				controls.zoomSpeed = 5;
+				controls.panSpeed = 0.8;
+
+				controls.noZoom = false;
+				controls.noPan = true;
+
+				controls.staticMoving = true;
+//				controls.dynamicDampingFactor = 0.15;
+
+				controls.keys = [ 65, 83, 68 ];
+
                        }
 
 			function animate() {
-
 				requestAnimationFrame( animate );
-
+				controls.update();    
 				render();
-
 			}
 
 			function render() {
 
-				var timer = Date.now() * 0.00015;
-
-				camera.position.x = Math.cos( timer ) * 3;
+//				var timer = Date.now() * 0.00015;
+//				camera.position.x = Math.cos( timer ) * 3;
+				camera.position.x = 2;
 //				camera.position.z = Math.sin( timer ) * 3;
-				camera.position.z = 1.75;
-//				camera.position.x += ( mouseX ) * .0001;
+				camera.position.z = 2.2;
+//				camera.position.x += ( mouseX ) * .01;
 //				camera.position.y += ( - mouseY - camera.position.y ) * .1;
 // console.log(camera.position.x);
 				camera.lookAt( cameraTarget );
@@ -175,6 +186,7 @@
 				renderer.render( scene, camera );
 
 			}
+
 
 			function addShadowedLight( x, y, z, color, intensity ) {
 
@@ -198,7 +210,7 @@
 				directionalLight.shadowMapHeight = 1024;
 
 				directionalLight.shadowBias = -0.005;
-				directionalLight.shadowDarkness = 0.15;
+				directionalLight.shadowDarkness = 0.25;
 
 			}
 
@@ -214,12 +226,6 @@
 
 			}
 
-			function onDocumentMouseMove(event) {
-
-				mouseX = ( event.clientX - windowHalfX );
-				mouseY = ( event.clientY - windowHalfY );
-
-			}
 </script>
 
 </body>
