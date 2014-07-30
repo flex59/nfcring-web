@@ -76,6 +76,56 @@
 
 				loader.load( './4-5.stl' );
 
+				var loaderInlay = new THREE.STLLoader();
+				loaderInlay.addEventListener( 'load', function ( event ) {
+
+					var geometry = event.content;
+					var material = new THREE.MeshPhongMaterial( {
+						color: new THREE.Color( 0x000000 ),
+						specular:new THREE.Color( 0x000000 ),
+						shininess: 30,
+						shading: THREE.SmoothShading,
+						reflectivity: 0
+					} )
+
+					var mesh = new THREE.Mesh( geometry, material );
+	
+					mesh.position.set( 0, 0, 0 );
+					mesh.rotation.set( .8, 0, 0 );
+
+					mesh.scale.set( 1, 1, 1 );
+					mesh.castShadow = true;
+					mesh.receiveShadow = true;
+					scene.add( mesh );
+				} );
+
+				loaderInlay.load( './4-5-inlay.stl' );
+
+				var loaderBottomInlay = new THREE.STLLoader();
+				loaderBottomInlay.addEventListener( 'load', function ( event ) {
+
+					var geometry = event.content;
+					var material = new THREE.MeshPhongMaterial( {
+						color: new THREE.Color( 0xffffff ),
+						specular:new THREE.Color( 0xfffffff ),
+						shininess: 30,
+						shading: THREE.SmoothShading,
+						reflectivity: 0
+					} )
+
+					var mesh = new THREE.Mesh( geometry, material );
+	
+					mesh.position.set( 0, 0, 0 );
+					mesh.rotation.set( .8, 3.142, 0 );
+
+					mesh.scale.set( 1, 1, 1 );
+					mesh.castShadow = true;
+					mesh.receiveShadow = true;
+					scene.add( mesh );
+				} );
+
+				loaderBottomInlay.load( './4-5-inlay.stl' );
+
 				// Lights
 
 				scene.add( new THREE.AmbientLight( 0x777777 ) );
