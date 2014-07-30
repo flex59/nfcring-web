@@ -41,14 +41,14 @@
 				var plane = new THREE.Mesh( new THREE.PlaneGeometry( 20, 30 ), new THREE.MeshPhongMaterial( { ambient: 0xffffff, color: 0xffffff, specular: 0xffffff } ) );
 				plane.rotation.x = -Math.PI/2;
 				plane.position.y = -0.4;
-				scene.add( plane );
+//				scene.add( plane );
 
-				plane.receiveShadow = true;
+//				plane.receiveShadow = true;
 
 				// ASCII file
 
 				var loader = new THREE.STLLoader();
-/*
+
 				loader.addEventListener( 'load', function ( event ) {
 
 					var geometry = event.content;
@@ -73,7 +73,6 @@
 				} );
 
 				loader.load( './4-5.stl' );
-*/
 
 				var loaderInlay = new THREE.STLLoader();
 				loaderInlay.addEventListener( 'load', function ( event ) {
@@ -127,7 +126,7 @@
 
 				// Lights
 
-				scene.add( new THREE.AmbientLight( 0x777777 ) );
+				// scene.add( new THREE.AmbientLight( 0x777777 ) );
 
 				addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
 				addShadowedLight( 0.5, 1, 0.1, 0xffffff, 1 );
@@ -138,6 +137,7 @@
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
 				renderer.setClearColor( scene.fog.color, 1 );
+				renderer.setClearColorHex( 0xffffff, 1 );
 
 				renderer.gammaInput = true;
 				renderer.gammaOutput = true;
