@@ -4,7 +4,7 @@
 <script src="STLLoader.js"></script>
 <script src="Detector.js"></script>
 <script src="TrackballControls.js"></script>
-
+<script src="OrbitControls.js"></script>
 </head>
 
 <body style="margin:0;padding:0">
@@ -26,7 +26,7 @@
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 0.5, window.innerWidth / window.innerHeight, 2, 5 );
+				camera = new THREE.PerspectiveCamera( 0.5, window.innerWidth / window.innerHeight, 1e-1, 1e4 );
 				camera.position.set( 0.1, 1, 0.8 );
 
 				cameraTarget = new THREE.Vector3( 0,0,0 );
@@ -38,12 +38,14 @@
 
 				// Ground
 
+/*
 				var plane = new THREE.Mesh( new THREE.PlaneGeometry( 20, 30 ), new THREE.MeshPhongMaterial( { ambient: 0xffffff, color: 0xffffff, specular: 0xffffff } ) );
 				plane.rotation.x = -Math.PI/2;
 				plane.position.y = -0.4;
 				scene.add( plane );
 
 				plane.receiveShadow = true;
+*/
 
 
 				// ASCII file
@@ -148,6 +150,7 @@
 
 				window.addEventListener( 'resize', onWindowResize, false );
 
+/*
 				controls = new THREE.TrackballControls( camera );
 				controls.target.set( 0, 0, 0 );
 
@@ -162,6 +165,11 @@
 //				controls.dynamicDampingFactor = 0.15;
 
 				controls.keys = [ 65, 83, 68 ];
+*/
+				controls = new THREE.OrbitControls( camera );
+				controls.damping = 0.2;
+				controls.addEventListener( 'change', render );
+
 
                        }
 
