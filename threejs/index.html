@@ -6,7 +6,7 @@
 
 </head>
 
-<body>
+<body style="margin:0;padding:0">
 
 <script>
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
@@ -14,30 +14,35 @@
 			var container;
 
 			var camera, cameraTarget, scene, renderer;
+                        var windowHalfX = 0;
+                        var windowHalfY = 0;
+			var mouseX = 0;
+			var mouseY = 0;
 
 			init();
 			animate();
 
 			function init() {
 
+				document.addEventListener('mousemove', onDocumentMouseMove, false);
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
-				camera = new THREE.PerspectiveCamera( 10, window.innerWidth / window.innerHeight, 2, 5 );
-				camera.position.set( 1, 1, 1 );
+				camera = new THREE.PerspectiveCamera( 0.5, window.innerWidth / window.innerHeight, 2, 5 );
+				camera.position.set( 0.1, 1, 0.8 );
 
 				cameraTarget = new THREE.Vector3( 0,0,0 );
 
 				scene = new THREE.Scene();
 
-//				scene.fog = new THREE.Fog( 0x000000, 20, 20 );
+				scene.fog = new THREE.Fog( 0x000000, 20, 20 );
 
 
 				// Ground
 
-				var plane = new THREE.Mesh( new THREE.PlaneGeometry( 20, 30 ), new THREE.MeshPhongMaterial( { ambient: 0xffffff, color: 0x000000, specular: 0xffffff } ) );
+				var plane = new THREE.Mesh( new THREE.PlaneGeometry( 20, 30 ), new THREE.MeshPhongMaterial( { ambient: 0xffffff, color: 0xffffff, specular: 0xffffff } ) );
 				plane.rotation.x = -Math.PI/2;
-				plane.position.y = -0.10;
+				plane.position.y = -0.3;
 				scene.add( plane );
 
 				plane.receiveShadow = true;
@@ -48,14 +53,31 @@
 				var loader = new THREE.STLLoader();
 				loader.addEventListener( 'load', function ( event ) {
 
-					var geometry = event.content;
-					var material = new THREE.MeshPhongMaterial( { ambient: 0x000000, color: 0x000000, specular: 0x111111, shininess: 100 } );
+				var geometry = event.content;
+				var r = "./";
+				var urls = [ r + "px.jpg", r + "nx.jpg",
+							 r + "py.jpg", r + "ny.jpg",
+							 r + "pz.jpg", r + "nz.jpg" ];
+
+//				var textureCube = THREE.ImageUtils.loadTextureCube( urls );
+
+					var material = new THREE.MeshPhongMaterial( {
+							color: 0x000000,
+							specular:0xffffff,
+							combine: THREE.MultiplyOperation,
+							shininess: 4,
+							shading: THREE.SmoothShading,
+							reflectivity: 1
+					} )
+//							envMap: textureCube
+
+
 					var mesh = new THREE.Mesh( geometry, material );
 
-					mesh.position.set( 0, - 0, 0 );
-					mesh.rotation.set( 0, - 0, 0 );
+					mesh.position.set( 0, 0, 0 );
+					mesh.rotation.set( .8, 0, 0 );
 
-					mesh.scale.set( 20, 20, 20 );
+					mesh.scale.set( 1, 1, 1 );
 
 					mesh.castShadow = true;
 					mesh.receiveShadow = true;
@@ -69,8 +91,8 @@
 
 				scene.add( new THREE.AmbientLight( 0x777777 ) );
 
-				addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
-				addShadowedLight( 0.5, 1, -1, 0xffffff, 1 );
+//				addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
+				addShadowedLight( 0.5, 1, 0.1, 0xffffff, 1 );
 
 				// renderer
 
@@ -104,8 +126,11 @@
 				var timer = Date.now() * 0.00015;
 
 				camera.position.x = Math.cos( timer ) * 3;
-				camera.position.z = Math.sin( timer ) * 3;
-
+//				camera.position.z = Math.sin( timer ) * 3;
+				camera.position.z = 1.75;
+//				camera.position.x += ( mouseX ) * .0001;
+//				camera.position.y += ( - mouseY - camera.position.y ) * .1;
+// console.log(camera.position.x);
 				camera.lookAt( cameraTarget );
 
 				renderer.render( scene, camera );
@@ -140,10 +165,20 @@
 
 			function onWindowResize() {
 
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
 
 				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove(event) {
+
+				mouseX = ( event.clientX - windowHalfX );
+				mouseY = ( event.clientY - windowHalfY );
 
 			}
 </script>
