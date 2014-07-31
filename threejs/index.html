@@ -47,6 +47,17 @@
 
 				// ASCII file
 
+				
+				var path = "pisa/";
+				var format = '.png';
+				var urls = [
+					path + 'px' + format, path + 'nx' + format,
+					path + 'py' + format, path + 'ny' + format,
+					path + 'pz' + format, path + 'nz' + format
+				];
+
+				var textureCube = THREE.ImageUtils.loadTextureCube( urls );
+				
 				var loader = new THREE.STLLoader();
 
 				loader.addEventListener( 'load', function ( event ) {
@@ -58,7 +69,9 @@
 						combine: THREE.MultiplyOperation,
 						shininess: 4,
 						shading: THREE.SmoothShading,
-						reflectivity: 1
+						reflectivity: 1,
+						envMap: textureCube,
+						
 					} )
 
 					var mesh = new THREE.Mesh( geometry, material );
