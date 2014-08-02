@@ -1,6 +1,7 @@
 <head>
 <!-- Everything from http://threejs.org/examples/webgl_loader_stl.html -->
 <script src="three.min.js"></script>
+<script src="STLLoader.js"></script>
 <script src="Detector.js"></script>
 <script src="TrackballControls.js"></script>
 <script src="OrbitControls.js"></script>
