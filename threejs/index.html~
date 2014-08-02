@@ -68,6 +68,7 @@
 					scene.add( mesh );
 				} );
 
+/*
 				var loaderInlay = new THREE.JSONLoader();
 				loaderInlay.load( './4-5-inlay.json' , function ( geometry ) {
 
@@ -83,8 +84,10 @@
 	
 					mesh.position.set( 0, 0, 0 );
 					mesh.scale.set( 40, 40, 40 );
+					mesh.rotation.set( 3.142, 0, 0 );
 					scene.add( mesh );
 				} );
+*/
 
 				var loaderInlay = new THREE.JSONLoader();
 				loaderInlay.load( './4-5-inlay.json' , function ( geometry ) {
@@ -101,7 +104,7 @@
 	
 					mesh.position.set( 0, 0, 0 );
 					mesh.scale.set( 40, 40, 40 );
-					mesh.rotation.set( 3.142, 0, 0 );
+//					mesh.rotation.set( 3.142, 0, 0 );
 					scene.add( mesh );
 				} );
 
@@ -109,7 +112,7 @@
 				// Lights
 				addShadowedLight( -.2, 0, 0, 0xffffff, 3.35 );
 				addShadowedLight( 1, 1, 1, 0xffffff, 2.35 );
-				addShadowedLight( 0.5, 1, 0.1, 0xffffff, 2 );
+				addShadowedLight( 0.5, 1, 0.1, 0xffffff, 2.5 );
 
 				// renderer
 

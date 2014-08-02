@@ -68,6 +68,7 @@
 					scene.add( mesh );
 				} );
 
+
 				var loaderInlay = new THREE.JSONLoader();
 				loaderInlay.load( './4-5-inlay.json' , function ( geometry ) {
 
@@ -83,6 +84,7 @@
 	
 					mesh.position.set( 0, 0, 0 );
 					mesh.scale.set( 40, 40, 40 );
+					mesh.rotation.set( 3.142, 0, 0 );
 					scene.add( mesh );
 				} );
 
@@ -101,7 +103,7 @@
 	
 					mesh.position.set( 0, 0, 0 );
 					mesh.scale.set( 40, 40, 40 );
-					mesh.rotation.set( 3.142, 0, 0 );
+//					mesh.rotation.set( 3.142, 0, 0 );
 					scene.add( mesh );
 				} );
 
