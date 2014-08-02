@@ -1,7 +1,6 @@
 <head>
 <!-- Everything from http://threejs.org/examples/webgl_loader_stl.html -->
 <script src="three.min.js"></script>
-<script src="STLLoader.js"></script>
 <script src="Detector.js"></script>
 <script src="TrackballControls.js"></script>
 <script src="OrbitControls.js"></script>
@@ -108,9 +107,9 @@
 
 
 				// Lights
-				addShadowedLight( -.2, 0, 0, 0xffffff, 2.35 );
-				addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
-				addShadowedLight( 0.5, 1, 0.1, 0xffffff, 1 );
+				addShadowedLight( -.2, 0, 0, 0xffffff, 3.35 );
+				addShadowedLight( 1, 1, 1, 0xffffff, 2.35 );
+				addShadowedLight( 0.5, 1, 0.1, 0xffffff, 2 );
 
 				// renderer
 
