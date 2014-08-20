@@ -105,10 +105,9 @@ function init() {
   addShadowedLight(5, -1, -3, 0xffffff, 2.35);
   addShadowedLight(0, 3, 0, 0xffffff, 1.35);
   addShadowedLight(5, -5, 30, 0xffffff, 3.5);
+
   // renderer
-  renderer = new THREE.WebGLRenderer({
-    antialias: true
-  });
+  renderer = Detector.webgl? new THREE.WebGLRenderer({antialias: true}): new THREE.CanvasRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setClearColor(scene.fog.color, 1);
   renderer.setClearColorHex(0xffffff, 1);
