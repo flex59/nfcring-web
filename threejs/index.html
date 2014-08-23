@@ -113,8 +113,7 @@ function init() {
   // renderer
   renderer = Detector.webgl? new THREE.WebGLRenderer({antialias: true}): new THREE.CanvasRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(scene.fog.color, 1);
-  renderer.setClearColorHex(0xffffff, 1);
+  renderer.setClearColor(0xffffff, 1);
   renderer.gammaInput = true;
   renderer.gammaOutput = true;
   renderer.shadowMapEnabled = true;
