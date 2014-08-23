@@ -10,7 +10,8 @@
 </head>
 
 <body style="margin:0;padding:0">
-
+  <div id="ringRender" style="width:100%;height:100%"></div>
+</body>
 <script>
 if (!Detector.webgl) Detector.addGetWebGLMessage();
 var container;
@@ -21,8 +22,7 @@ init();
 animate();
 
 function init() {
-  container = document.createElement('div');
-  document.body.appendChild(container);
+  var container = document.getElementById("ringRender");
   camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1e-1, 1e4);
   camera.position.set(0.1, 1, 0.8);
   cameraTarget = new THREE.Vector3(0, 0, 0);
@@ -46,7 +46,7 @@ function init() {
       shininess: 5,
       shading: THREE.SmoothShading,
       reflectivity: 1,
-      envMap: textureCube,
+      envMap: textureCube
     })
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(0, 0, 0);
@@ -159,6 +159,4 @@ function onWindowResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 </script>
-
-</body>
 </html>
