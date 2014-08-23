@@ -9,7 +9,7 @@
 <script src="OrbitControls.js"></script>
 </head>
 
-<body style="margin:0;padding:0">
+<body style="margin:0;padding:0;">
   <div id="ringRender" style="width:100%;height:100%"></div>
 </body>
 <script>
@@ -40,13 +40,14 @@ function init() {
   var loader = new THREE.JSONLoader();
   loader.load('./4-5.js', function(geometry) {
     var material = new THREE.MeshPhongMaterial({
-      color: 0x000000,
-      specular: 0xffffff,
+      color: 0xA9A9A9,
+      specular: 0x000000,
       combine: THREE.MultiplyOperation,
       shininess: 5,
       shading: THREE.SmoothShading,
       reflectivity: 1,
-      envMap: textureCube
+      envMap: textureCube,
+      overdraw: true
     })
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(0, 0, 0);
@@ -62,7 +63,8 @@ function init() {
       specular: new THREE.Color(0x000000),
       shininess: 30,
       shading: THREE.SmoothShading,
-      reflectivity: 1
+      reflectivity: 1,
+      overdraw: true
     })
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(0, 0, 0);
@@ -81,7 +83,8 @@ function init() {
       specular: new THREE.Color(0xffffff),
       shininess: 30,
       shading: THREE.SmoothShading,
-      reflectivity: 1
+      reflectivity: 1,
+      overdraw: true
     })
 */
    
@@ -92,7 +95,8 @@ function init() {
       shading: THREE.SmoothShading,
       reflectivity: 100,
       ambient: new THREE.Color(0xffffff),
-      map: THREE.ImageUtils.loadTexture('./inlayUV.png') 
+      overdraw: true,
+      map: THREE.ImageUtils.loadTexture('./inlayUV.png')
     });
 
     var mesh = new THREE.Mesh(geometry, material);
