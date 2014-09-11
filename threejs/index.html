@@ -24,7 +24,7 @@ function init() {
   container = document.createElement('div');
   document.body.appendChild(container);
   camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1e-1, 1e4);
-  camera.position.set(0.1, 1, 0.8);
+  camera.position.set(0.9, 0.4, -1.2);
   cameraTarget = new THREE.Vector3(0, 0, 0);
   scene = new THREE.Scene();
   scene.fog = new THREE.Fog(0x000000, 20, 20);
@@ -60,9 +60,9 @@ function init() {
     var material = new THREE.MeshPhongMaterial({
       color: new THREE.Color(0x000000),
       specular: new THREE.Color(0x000000),
-      shininess: 30,
+      shininess: 5,
       shading: THREE.SmoothShading,
-      reflectivity: 1
+      reflectivity: 5
     })
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(0, 0, 0);
@@ -74,23 +74,12 @@ function init() {
   // Top Inlay Cover
   var loaderInlay = new THREE.JSONLoader();
   loaderInlay.load('./inlayUV.js', function(geometry) {
-
-/*
-    var material = new THREE.MeshPhongMaterial({
-      color: new THREE.Color(0xffffff),
-      specular: new THREE.Color(0xffffff),
-      shininess: 30,
-      shading: THREE.SmoothShading,
-      reflectivity: 1
-    })
-*/
-   
     var material = new THREE.MeshPhongMaterial({ 
       color: new THREE.Color(0xd3d3d3),
       specular: new THREE.Color(0xffffff),
-      shininess: 100,
+      shininess: 200,
       shading: THREE.SmoothShading,
-      reflectivity: 100,
+      reflectivity: 1,
       ambient: new THREE.Color(0xffffff),
       map: THREE.ImageUtils.loadTexture('./inlayUV.png') 
     });
@@ -100,6 +89,30 @@ function init() {
     mesh.scale.set(40, 40, 40);
     scene.add(mesh);
   });
+  var loaderInlay = new THREE.JSONLoader();
+  loaderInlay.load('./4-5-inlay.js', function(geometry) {
+    var material = new THREE.MeshPhongMaterial({
+      color: new THREE.Color(0x000000),
+      specular: new THREE.Color(0x000000),
+      shininess: 1,
+      shading: THREE.SmoothShading,
+      reflectivity: 1,
+      transparent: true,
+      opacity:0.7
+    })
+    var mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(0, 0, 0);
+    mesh.scale.set(40, 40, 40);
+    mesh.rotation.set(3.142, 0, 0);
+    scene.add(mesh);
+
+    var mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(0, 0, 0);
+    mesh.scale.set(40, 40, 40);
+    scene.add(mesh);
+  });
+
+
 
   // Lights
   addShadowedLight(5, -1, -3, 0xffffff, 2.35);
