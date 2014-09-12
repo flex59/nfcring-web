@@ -9,7 +9,7 @@
 <script src="OrbitControls.js"></script>
 </head>
 
-<body style="margin:0;padding:0;">
+<body style="margin:0;padding:0;width:100%;height:100%">
   <div id="ringRender" style="width:100%;height:100%"></div>
 </body>
 <script>
@@ -38,6 +38,8 @@ function init() {
   ];
   var textureCube = THREE.ImageUtils.loadTextureCube(urls);
   var loader = new THREE.JSONLoader();
+
+  // Ring Blank
   loader.load('./4-5.js', function(geometry) {
     var material = new THREE.MeshPhongMaterial({
       color: 0xA9A9A9,
@@ -55,25 +57,25 @@ function init() {
     scene.add(mesh);
   });
 
-  // Bottom Inlay Cover
+  // Top Inlay Cover
   var loaderInlay = new THREE.JSONLoader();
   loaderInlay.load('./4-5-inlay.js', function(geometry) {
-    var material = new THREE.MeshPhongMaterial({
+    // Black Top
+    var material = new THREE.MeshLambertMaterial({
       color: new THREE.Color(0x000000),
       specular: new THREE.Color(0x000000),
       shininess: 5,
       shading: THREE.SmoothShading,
-      reflectivity: 1,
-      overdraw: true
-    })
+      reflectivity: 1
+    });
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(0, 0, 0);
     mesh.scale.set(40, 40, 40);
     mesh.rotation.set(3.142, 0, 0);
     scene.add(mesh);
   });
-
-  // Top Inlay Cover
+/*
+  // Bottom Inlay
   var loaderInlay = new THREE.JSONLoader();
   loaderInlay.load('./inlayUV.js', function(geometry) {
     var material = new THREE.MeshPhongMaterial({ 
@@ -92,6 +94,8 @@ function init() {
     mesh.scale.set(40, 40, 40);
     scene.add(mesh);
   });
+
+  // Bottom Inlay Cover (Transparent)
   var loaderInlay = new THREE.JSONLoader();
   loaderInlay.load('./4-5-inlay.js', function(geometry) {
     var material = new THREE.MeshPhongMaterial({
@@ -114,7 +118,7 @@ function init() {
     mesh.scale.set(40, 40, 40);
     scene.add(mesh);
   });
-
+*/
   // Lights
   addShadowedLight(5, -1, -3, 0xffffff, 2.35);
   addShadowedLight(0, 3, 0, 0xffffff, 1.35);
