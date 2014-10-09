@@ -10,6 +10,7 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" type="text/css" href="stylesheets/holding.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -20,8 +21,8 @@
 	    <header>
 	    	<a href="/" id="nfcring-logo"><img src="img/nfcring-logo.png" alt="NFC Ring"></a>
 				<h1>One Smart Ring, Unlimited Possibilities</h1>
-				<p class="sublink"><a href="http://store.nfcring.com">Now available</a></p>
-				<a href="http://store.nfcring.com"><img src="img/nfcring-four-set.jpg" alt="The NFC Ring - Available in a number of styles and many sizes" id="ringset"></a>
+				<p class="sublink"><a href="http://store.nfcring.com" class="storeLink">Now available</a></p>
+				<a href="http://store.nfcring.com" class="storeLink"><img src="img/nfcring-four-set.jpg" alt="The NFC Ring - Available in a number of styles and many sizes" id="ringset"></a>
 	    	<h2><span>&ldquo;</span><em>The NFC Ring can be used to unlock doors, mobile phones, transfer information and link people.</em><span class="right">&rdquo;</span></h2>
 	    </header>
 	    
@@ -30,7 +31,7 @@
       	
       	  <h2>ORDERS NOW LIVE!</h2>
       	  <p>Limited Stock</p>
-      	  <a href="http://store.nfcring.com" class="button">Visit the store</a>
+      	  <a href="http://store.nfcring.com" class="button storeLink" >Visit the store</a>
 
       	</div>
 	    </section>
@@ -99,8 +100,7 @@
 			</section>
 
     </div>
-    <script type="text/javascript">
-
+<script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-34066705-2']);
   _gaq.push(['_trackPageview']);
@@ -110,7 +110,20 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+</script>
+<script type="text/javascript">
+jQuery.ajax( {
+  url: '//freegeoip.net/json/',
+  type: 'POST',
+  dataType: 'jsonp',
+  success: function(location) {
+    // If we're team America then rewrite store link
+    if(location.country_code === "US" || location.country_code === "CA"){
+      // $('.storeLink').attr("href","http://americas.nfcring.com");
+    }
+  }
+} );
+</script>
 
-  </script>
   </body>
 </html>
