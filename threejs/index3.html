@@ -51,8 +51,7 @@ function init() {
 
   // Ring Blank
   var loader = new THREE.JSONLoader();
-  loader.load('./4-5-2.js', function(geometry) {
-//  loader.load('./10.js', function(geometry) {
+  loader.load('./10.js', function(geometry) {
     var material = new THREE.MeshPhongMaterial({
       color: 0xA9A9A9,
       specular: 0x000000,
@@ -80,8 +79,7 @@ function init() {
 
     // Top Inlay Cover
     var loaderInlay = new THREE.JSONLoader();
-    loaderInlay.load('./4-5-inlay2.js', function(geometry) {
-//    loaderInlay.load('./10-inlay.js', function(geometry) {
+    loaderInlay.load('./10-inlay.js', function(geometry) {
       // Black Top
       var material = new THREE.MeshLambertMaterial({
         color: new THREE.Color(0x000000),
@@ -94,9 +92,29 @@ function init() {
       var mesh = new THREE.Mesh(geometry, material);
       console.log("height", height);
       var inlayOffset = height - 2.33063;
-      mesh.position.set(0, inlayOffset, 0); // mesh.scale.set(40, 40, 40);
+      mesh.position.set(0, inlayOffset, 0);
       scene.add(mesh);
     });
+
+    // Bottom Inlay Cover
+    var loaderInlay = new THREE.JSONLoader();
+    loaderInlay.load('./10-inlay-bottom.js', function(geometry) {
+      // Black Top
+      var material = new THREE.MeshLambertMaterial({
+        color: new THREE.Color(0x000000),
+        specular: new THREE.Color(0x000000),
+        shininess: 5,
+        shading: THREE.SmoothShading,
+        reflectivity: 1,
+        overdraw: true
+      });
+      var mesh = new THREE.Mesh(geometry, material);
+      console.log("height", height);
+      var inlayOffset = - height + 2.33063;
+      mesh.position.set(0, inlayOffset, 0); 
+      scene.add(mesh);
+    });
+
   });
 
   // Lights
