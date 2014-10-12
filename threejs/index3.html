@@ -29,6 +29,8 @@ if (!Detector.webgl){
 
 function init() {
   var container = document.getElementById("ringRender");
+
+  // If I get artifacting I should modify this.
   camera = new THREE.PerspectiveCamera(2, window.innerWidth / window.innerHeight, 1, 25000);
 
   // Sets camera position, not camera pivot point
@@ -47,7 +49,6 @@ function init() {
     path + 'pz' + format, path + 'nz' + format
   ];
   var textureCube = THREE.ImageUtils.loadTextureCube(urls);
-
 
   // Ring Blank
   var loader = new THREE.JSONLoader();
@@ -73,9 +74,12 @@ function init() {
     var bbox = new THREE.BoundingBoxHelper (mesh, "0xff0000");
     height = boundingBox.max.y;
 
-//    scene.add(bbox);
-//    bbox.update();
+    // scene.add(bbox);
+    // bbox.update();
     scene.add(mesh);
+
+    // Inlay depth
+    var inlayDepth = 2.23063;
 
     // Top Inlay Cover
     var loaderInlay = new THREE.JSONLoader();
@@ -91,7 +95,7 @@ function init() {
       });
       var mesh = new THREE.Mesh(geometry, material);
       console.log("height", height);
-      var inlayOffset = height - 2.33063;
+      var inlayOffset = height - inlayDepth;
       mesh.position.set(0, inlayOffset, 0);
       scene.add(mesh);
     });
@@ -110,7 +114,7 @@ function init() {
       });
       var mesh = new THREE.Mesh(geometry, material);
       console.log("height", height);
-      var inlayOffset = - height + 2.33063;
+      var inlayOffset = - height + inlayDepth;
       mesh.position.set(0, inlayOffset, 0); 
       scene.add(mesh);
     });
