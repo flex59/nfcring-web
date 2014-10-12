@@ -29,7 +29,7 @@ if (!Detector.webgl){
 
 function init() {
   var container = document.getElementById("ringRender");
-  camera = new THREE.PerspectiveCamera(1, window.innerWidth / window.innerHeight, 1e-1, 1e4);
+  camera = new THREE.PerspectiveCamera(2, window.innerWidth / window.innerHeight, 1, 25000);
 
   // Sets camera position, not camera pivot point
   camera.position.set(1200, 500, -1500.2);
@@ -37,7 +37,7 @@ function init() {
   scene = new THREE.Scene();
 
   // Reflective background
-  scene.fog = new THREE.Fog(0x000000, 2000, 2000);
+  scene.fog = new THREE.Fog(0x000000, 20000, 20000);
   // ASCII file
   var path = "pisa/";
   var format = '.png';
