@@ -1,3 +1,9 @@
+<!--
+
+THIS FILE IS REDUNDANT, DO NOT USE THIS FILE!
+
+-->
+
 <!DOCTYPE html>
 <head>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -14,107 +20,72 @@
   <div id="ringRender" style="width:100%;height:100%"></div>
 </body>
 <script>
+var refScale = {
+  4.5: 2.6,
+  5: 2.57,
+  5.5: 2.54,
+  6: 2.51,
+  6.5: 2.48,
+  7: 2.45,
+  7.5: 2.42,
+  8: 2.39,
+  8.5: 2.36,
+  9: 2.33,
+  9.5: 2.3,
+  10: 2.27,
+  10.5: 2.245,
+  11: 2.21,
+  11.5: 2.18,
+  12: 2.15,
+  12.5: 2.12,
+  13: 2.09,
+  13.5: 2.06,
+  14: 2.03,
+  14.5: 2,
+  15: 1.97,
+  15.5: 1.94,
+  16: 1.91
+}
+
+var sku = getURLParameter("sku");
+// Example SKU: NTAG203-V1-NORMAL-T-B-T-12
+if(!sku || sku == "null"){
+  alert("No SKU provided so using NTAG203-V1-NORMAL-T-B-T-12 -- Please use ring.html?sku=Whatever");
+  sku = "NTAG203-V1-NORMAL-T-B-T-12";
+}
+
 if (!Detector.webgl){
   // If no WebGL don't even attempt, Canvas can't handle this task
   Detector.addGetWebGLMessage();
 }else{
+  var ringSize = sku.split("-")[6];
+  var inlayDepth = refScale[ringSize]; 
+  ringSize = ringSize.replace(".","-");
+  var topInlay = sku.split("-")[4];
+  var bottomInlay = sku.split("-")[5];
   var container, camera, cameraTarget, scene, renderer;
   var windowHalfX = 0;
   var windowHalfY = 0;
+  var height = 0;
   init();
   animate();
 }
 
 function init() {
   var container = document.getElementById("ringRender");
-  camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1e-1, 1e4);
-  camera.position.set(1.2, 0.2, -1.2);
-  cameraTarget = new THREE.Vector3(0, 0, 0);
+
+  // If I get artifacting I should modify this.
+  camera = new THREE.PerspectiveCamera(1, window.innerWidth / window.innerHeight, -10, 10);
+
+  // Sets camera position, not camera pivot point
+  camera.position.set(1800, -200, -1500.2);
   scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0x000000, 20, 20);
-  // ASCII file
-  var path = "pisa/";
-  var format = '.png';
-  var urls = [
-    path + 'px' + format, path + 'nx' + format,
-    path + 'py' + format, path + 'ny' + format,
-    path + 'pz' + format, path + 'nz' + format
-  ];
-  var textureCube = THREE.ImageUtils.loadTextureCube(urls);
-  var loader = new THREE.JSONLoader();
 
-  // Ring Blank
-  loader.load('./4-5.js', function(geometry) {
-    var material = new THREE.MeshPhongMaterial({
-      color: 0xA9A9A9,
-      specular: 0x000000,
-      combine: THREE.MultiplyOperation,
-      shininess: 5,
-      shading: THREE.SmoothShading,
-      reflectivity: 1,
-      envMap: textureCube,
-      overdraw: true
-    })
-    var mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(0, 0, 0);
-    mesh.scale.set(40, 40, 40);
-    scene.add(mesh);
-  });
+  scene.fog = new THREE.Fog(0x000000, 10, 10000);
 
-  // Top Inlay Cover
-  var loaderInlay = new THREE.JSONLoader();
-  loaderInlay.load('./4-5-inlay.js', function(geometry) {
-    // Black Top
-    var material = new THREE.MeshLambertMaterial({
-      color: new THREE.Color(0x000000),
-      specular: new THREE.Color(0x000000),
-      shininess: 5,
-      shading: THREE.SmoothShading,
-      reflectivity: 1
-    });
-    var mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(0, 0, 0);
-    mesh.scale.set(40, 40, 40);
-    mesh.rotation.set(3.142, 0, 0);
-    scene.add(mesh);
-  });
-
-  // Bottom Inlay
-  var loaderInlay = new THREE.JSONLoader();
-  loaderInlay.load('./inlayUV.js', function(geometry) {
-    var material = new THREE.MeshLambertMaterial({ 
-      color: new THREE.Color(0xd3d3d3),
-      specular: new THREE.Color(0xffffff),
-      shininess: 200,
-      shading: THREE.SmoothShading,
-      reflectivity: 1,
-      ambient: new THREE.Color(0xffffff),
-      overdraw: true,
-      map: THREE.ImageUtils.loadTexture('./inlayUV.png')
-    });
-
-    var mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(0, 0, 0);
-    mesh.scale.set(40, 40, 40);
-    scene.add(mesh);
-  });
-
-  // Bottom Inlay Cover (Transparent)
-  var loaderInlay = new THREE.JSONLoader();
-  loaderInlay.load('./4-5-inlay.js', function(geometry) {
-    var material = new THREE.MeshLambertMaterial({
-      color: new THREE.Color(0x000000),
-      specular: new THREE.Color(0x000000),
-      shininess: 1,
-      shading: THREE.SmoothShading,
-      reflectivity: 1,
-      transparent: true,
-      opacity:0.7
-    })
-    var mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(0, 0, 0);
-    mesh.scale.set(40, 40, 40);
-    scene.add(mesh);
+  drawBlank(ringSize, function(height){
+    drawInlay("top", topInlay, height);
+    drawInlay("bottom", bottomInlay, height);
   });
 
   // Lights
@@ -172,6 +143,131 @@ function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function getURLParameter(name) {
+  return decodeURIComponent(
+    (RegExp('[?|&]'+name + '=' + '(.+?)(&|$)').exec(location.search)||[null,null])[1]
+  );
+}
+
+function drawBlank(ringSize, callback){
+  // ASCII file
+  var path = "pisa/";
+  var format = '.png';
+  var urls = [
+    path + 'px' + format, path + 'nx' + format,
+    path + 'py' + format, path + 'ny' + format,
+    path + 'pz' + format, path + 'nz' + format
+  ];
+  var textureCube = THREE.ImageUtils.loadTextureCube(urls);
+
+  var loader = new THREE.JSONLoader();
+  // Ring Blank
+  console.log("Loading RingSize", ringSize);
+  loader.load('./'+ringSize+'.js', function(geometry) {
+   var material = new THREE.MeshPhongMaterial({
+      color: 0xA9A9A9,
+      specular: 0x000000,
+      combine: THREE.MultiplyOperation,
+      side: THREE.DoubleSide,
+      shininess: 5,
+      shading: THREE.SmoothShading,
+      reflectivity: 1,
+      envMap: textureCube,
+      overdraw: true
+    })
+
+    var mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(0, 0, 0);
+    scene.add(mesh);
+
+    geometry.computeBoundingBox();
+    var boundingBox = geometry.boundingBox.clone();
+    var bbox = new THREE.BoundingBoxHelper (mesh, "0xff0000");
+    height = boundingBox.max.y;
+    console.log("height", height);
+
+    // scene.add(bbox);
+    // bbox.update();
+    scene.add(mesh);
+    callback(height);
+  });
+}
+
+function drawInlay(position, color, height){
+  if(position === "top"){
+    var rotation = 0;
+    var inlayOffset = height - inlayDepth;
+  }else{
+    var rotation = 3.142;
+    var inlayOffset = - height + inlayDepth;
+  }
+
+  // console.log(position, color);
+  
+  if(color === "B"){
+    var loaderInlay = new THREE.JSONLoader();
+    loaderInlay.load('./'+ringSize+'-inlay.js', function(geometry) {
+      var material = new THREE.MeshLambertMaterial({
+        color: new THREE.Color(0x000000),
+        specular: new THREE.Color(0x000000),
+        side: THREE.DoubleSide,
+        shininess: 5,
+        shading: THREE.SmoothShading,
+        reflectivity: 1
+      });
+      var mesh = new THREE.Mesh(geometry, material);
+      mesh.rotation.set(0, 0, 0);
+      mesh.rotation.set(rotation, 0, 0);
+      mesh.position.set(0, inlayOffset, 0);
+      scene.add(mesh);
+    });
+  }
+  if(color === "T"){
+    var loaderInlay = new THREE.JSONLoader();
+    loaderInlay.load('./'+ringSize+'-ntag203-inlay.js', function(geometry) {
+      var material = new THREE.MeshLambertMaterial({
+        color: new THREE.Color(0xd3d3d3),
+        specular: new THREE.Color(0xffffff),
+        shininess: 200,
+        shading: THREE.SmoothShading,
+        reflectivity: 1,
+        ambient: new THREE.Color(0xffffff),
+        map: THREE.ImageUtils.loadTexture('./uv.png'),
+        side: THREE.DoubleSide
+      });
+  
+      var mesh = new THREE.Mesh(geometry, material);
+      mesh.scale.set(0.95,0.95,0.95);
+      if(position === "bottom"){
+        mesh.rotation.set(0, 0, 0);
+      }else{
+        mesh.rotation.set(3.142, 0, 0);
+      }
+      mesh.position.set(0, inlayOffset, 0);
+      scene.add(mesh);
+    });
+
+    // Bottom Inlay Cover (Transparent)
+    var loaderInlay = new THREE.JSONLoader();
+    loaderInlay.load('./'+ringSize+'-inlay.js', function(geometry) {
+      var material = new THREE.MeshLambertMaterial({
+        color: new THREE.Color(0x000000),
+        specular: new THREE.Color(0x000000),
+        shininess: 1,
+        shading: THREE.SmoothShading,
+        reflectivity: 1,
+        transparent: true,
+        side: THREE.DoubleSide,
+        opacity:0.7
+      })
+      var mesh = new THREE.Mesh(geometry, material);
+      mesh.position.set(0, inlayOffset, 0);
+      mesh.rotation.set(rotation, 0, 0);
+      scene.add(mesh);
+    });
+  }
 }
 </script>
 </html>
