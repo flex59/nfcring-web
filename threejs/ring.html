@@ -189,9 +189,9 @@ function drawInlay(position, color, height){
   }
   if(color === "T"){
     var loaderInlay = new THREE.JSONLoader();
-    loaderInlay.load('./'+ringSize+'-inlay.js', function(geometry) {
+    // loaderInlay.load('./'+ringSize+'-inlay.js', function(geometry) {
 
-//    loaderInlay.load('./inlayUV.js', function(geometry) {
+    loaderInlay.load('./inlayUV.js', function(geometry) {
       var material = new THREE.MeshLambertMaterial({
         color: new THREE.Color(0xd3d3d3),
         specular: new THREE.Color(0xffffff),
@@ -228,6 +228,7 @@ function drawInlay(position, color, height){
       mesh.rotation.set(rotation, 0, 0);
       scene.add(mesh);
     });
+
   }
 }
 </script>
