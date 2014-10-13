@@ -14,6 +14,33 @@
   <div id="ringRender" style="width:100%;height:100%"></div>
 </body>
 <script>
+var refScale = {
+  4.5: 2.6,
+  5: 2.57,
+  5.5: 2.54,
+  6: 2.51,
+  6.5: 2.48,
+  7: 2.45,
+  7.5: 2.42,
+  8: 2.39,
+  8.5: 2.36,
+  9: 2.33,
+  9.5: 2.3,
+  10: 2.27,
+  10.5: 2.245,
+  11: 2.21,
+  11.5: 2.18,
+  12: 2.15,
+  12.5: 2.12,
+  13: 2.09,
+  13.5: 2.06,
+  14: 2.03,
+  14.5: 2,
+  15: 1.97,
+  15.5: 1.94,
+  16: 1.91
+}
+
 var sku = getURLParameter("sku");
 // Example SKU: NTAG203-V1-NORMAL-T-B-W-12
 if(!sku || sku == "null") alert("No SKU provided");
@@ -23,13 +50,13 @@ if (!Detector.webgl || sku == "null"){
   Detector.addGetWebGLMessage();
 }else{
   var ringSize = sku.split("-")[6];
+  var inlayDepth = refScale[ringSize]; 
   ringSize = ringSize.replace(".","-");
   var topInlay = sku.split("-")[4];
   var bottomInlay = sku.split("-")[5];
   var container, camera, cameraTarget, scene, renderer;
   var windowHalfX = 0;
   var windowHalfY = 0;
-  var inlayDepth = 2.23063;
   var height = 0;
   init();
   animate();
@@ -128,6 +155,7 @@ function drawBlank(ringSize, callback){
 
   var loader = new THREE.JSONLoader();
   // Ring Blank
+  console.log("Loading RingSize", ringSize);
   loader.load('./'+ringSize+'.js', function(geometry) {
    var material = new THREE.MeshPhongMaterial({
       color: 0xA9A9A9,
@@ -189,9 +217,7 @@ function drawInlay(position, color, height){
   }
   if(color === "T"){
     var loaderInlay = new THREE.JSONLoader();
-    // loaderInlay.load('./'+ringSize+'-inlay.js', function(geometry) {
-
-    loaderInlay.load('./inlayUV.js', function(geometry) {
+    loaderInlay.load('./'+ringSize+'-ntag203-inlay.js', function(geometry) {
       var material = new THREE.MeshLambertMaterial({
         color: new THREE.Color(0xd3d3d3),
         specular: new THREE.Color(0xffffff),
@@ -199,13 +225,13 @@ function drawInlay(position, color, height){
         shading: THREE.SmoothShading,
         reflectivity: 1,
         ambient: new THREE.Color(0xffffff),
-        overdraw: true,
-        side: THREE.DoubleSide,
-        map: THREE.ImageUtils.loadTexture('./inlayUV.png')
+        map: THREE.ImageUtils.loadTexture('./uv.png'),
+        side: THREE.DoubleSide
       });
   
       var mesh = new THREE.Mesh(geometry, material);
-      mesh.rotation.set(rotation, 0, 0);
+      mesh.scale.set(0.95,0.95,0.95);
+      mesh.rotation.set(0, 0, 0);
       mesh.position.set(0, inlayOffset, 0);
       scene.add(mesh);
     });
@@ -228,7 +254,6 @@ function drawInlay(position, color, height){
       mesh.rotation.set(rotation, 0, 0);
       scene.add(mesh);
     });
-
   }
 }
 </script>
