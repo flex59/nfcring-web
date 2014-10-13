@@ -10,7 +10,7 @@
 <script src="OrbitControls.js"></script>
 </head>
 
-<body style="margin:0;padding:0;width:100%;height:100%">
+<body style="margin:0;padding:0;width:100%;height:100%;overflow:hidden;">
   <div id="ringRender" style="width:100%;height:100%"></div>
 </body>
 <script>
@@ -31,15 +31,15 @@ function init() {
   var container = document.getElementById("ringRender");
 
   // If I get artifacting I should modify this.
-  camera = new THREE.PerspectiveCamera(2, window.innerWidth / window.innerHeight, 1, 25000);
+  camera = new THREE.PerspectiveCamera(1, window.innerWidth / window.innerHeight, -25, 25);
 
   // Sets camera position, not camera pivot point
   camera.position.set(1200, 500, -1500.2);
-  cameraTarget = new THREE.Vector3(0, 0, 0);
+//  cameraTarget = new THREE.Vector3(0, 0, 0);
   scene = new THREE.Scene();
 
   // Reflective background
-  scene.fog = new THREE.Fog(0x000000, 20000, 20000);
+  scene.fog = new THREE.Fog(0x000000, 200, 0);
   // ASCII file
   var path = "pisa/";
   var format = '.png';
@@ -105,8 +105,8 @@ function init() {
     loaderInlay.load('./10-inlay-bottom.js', function(geometry) {
       // Black Top
       var material = new THREE.MeshLambertMaterial({
-        color: new THREE.Color(0x000000),
-        specular: new THREE.Color(0x000000),
+        color: new THREE.Color(0xFFFFFF),
+        specular: new THREE.Color(0xFFFFFF),
         shininess: 5,
         shading: THREE.SmoothShading,
         reflectivity: 1,
@@ -137,7 +137,8 @@ function init() {
   container.appendChild(renderer.domElement);
   window.addEventListener('resize', onWindowResize, false);
   controls = new THREE.OrbitControls(camera);
-  controls.damping = 0.2;
+  controls.noZoom = true;
+  controls.damping = 0.1;
   controls.addEventListener('change', render);
 }
 
