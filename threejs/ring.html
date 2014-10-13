@@ -231,7 +231,11 @@ function drawInlay(position, color, height){
   
       var mesh = new THREE.Mesh(geometry, material);
       mesh.scale.set(0.95,0.95,0.95);
-      mesh.rotation.set(0, 0, 0);
+      if(position === "bottom"){
+        mesh.rotation.set(0, 0, 0);
+      }else{
+        mesh.rotation.set(3.142, 0, 0);
+      }
       mesh.position.set(0, inlayOffset, 0);
       scene.add(mesh);
     });
