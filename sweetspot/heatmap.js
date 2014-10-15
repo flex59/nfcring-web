@@ -46,6 +46,11 @@ nfcRing.heatmap = {
       console.log("2. Writing data to heatmap", nfcRing.heatmap.coOrdData);
       window.hm.store.setDataSet(nfcRing.heatmap.coOrdData);
       console.log("3. Done writing data to the heatmap");
+
+      nfcRing.heatmap.getImageLightness(function(b){
+        console.log("Brightness: "+b)
+      })
+
     });
   }, 
 
@@ -126,5 +131,29 @@ nfcRing.heatmap = {
     });
     y = y / maxYArr.length;
     $('#heatMap').css({"min-height":y+"px","height":y+"px"})
+
+//    nfcRing.heatmap.getImageLightness(function(b){alert("Brightness"+b)})
+
+  },
+  getImageLightness: function(callback) {
+    var canvas = hm.get("canvas");
+    var ctx = canvas.getContext("2d");
+    var imageData = ctx.getImageData(0,0,canvas.width,canvas.height);
+    var data = imageData.data;
+    var r,g,b,avg;
+    var colorSum = 0;
+
+    for(var x = 0, len = data.length; x < len; x+=4) {
+      r = data[x];
+      g = data[x+1];
+      b = data[x+2];
+
+      avg = Math.floor((r+g+b)/3);
+      colorSum += avg;
+    }
+
+    var brightness = Math.floor(colorSum / (canvas.width*canvas.height));
+    callback(brightness);
   }
+
 }
