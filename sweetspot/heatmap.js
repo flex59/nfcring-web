@@ -17,7 +17,8 @@ nfcRing.heatmap = {
         radius: 30,
         opacity: 100,
         gradient: {
-          '.95':'white'
+          '.85':'white',
+          '.1':'black'
         }
       }
 
