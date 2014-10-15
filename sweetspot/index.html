@@ -2,9 +2,7 @@
 <head>
   <script>
     var nfcRing = {};
-    var device = {
-      model: "browser"
-    }
+
   </script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="//rawgit.com/mclear/NFC_Ring_Control/master/www/js/heatmap.js"></script>
@@ -12,11 +10,23 @@
 </head>
 
 <body>
-  <div id="heatMap" style="min-width:200px;min-height:200px;"></div>
+  <div id="heatMap" style="min-width:1000px;min-height:1000px;"></div>
 </body>
 <script>
+  var model = gup("model");
+  if(!model) alert("no model set in query string");
 
-nfcRing.heatmap.init();
+  var device = {
+    model: model
+  }
 
+  nfcRing.heatmap.init();
+
+  function gup(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+       results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
 </script>
 </html>
