@@ -5,9 +5,7 @@ nfcRing.heatmap = {
   },
 
   init: function(){
-console.log("on");
     nfcRing.heatmap.loadFromRemote(function(){
-console.log(2);
       if($('#heatMap canvas').length >= 1){
         console.log("Heatmap already drawn");
         return;
@@ -33,7 +31,7 @@ console.log(2);
           var coOrd = {
             x: x,
             y: y,
-            count: v*10
+            count: v
           };
           nfcRing.heatmap.coOrdData.data.push(coOrd);
         }
