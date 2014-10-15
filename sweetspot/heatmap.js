@@ -73,8 +73,8 @@ nfcRing.heatmap = {
         var x = object.x; // 1
         var y = object.y; // 2
         if(object.maxX && object.maxY){
-          var maxX = object.maxX; // 800
-          var maxY = object.maxY; // 400
+          var maxX = object.maxX / 3 ; // 800 -- We devide by 3 because that's the pixelRatio the browser imposes
+          var maxY = object.maxY / 3 ; // 400
           maxXArr.push(maxX);
           maxYArr.push(maxY);
         }
