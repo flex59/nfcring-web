@@ -62,14 +62,22 @@ nfcRing.heatmap = {
     }
 
     var coOrdinateCounter = {};
+    var maxXArr = [];
+    var maxYArr = [];
     var model = device.model;
 
-    $.getJSON("http://sweetspot.nfcring.com/api/v1/sweetspot?model="+model).done(function(results){
+    $.getJSON("http://sweetspot.nfcring.com/api/v2/sweetspot?model="+model).done(function(results){
       results = JSON.parse(results);
       for (var i = 0; i < results.length; i++) { 
         var object = results[i];
         var x = object.x; // 1
         var y = object.y; // 2
+        if(object.maxX && object.maxY){
+          var maxX = object.maxX; // 800
+          var maxY = object.maxY; // 400
+          maxXArr.push(maxX);
+          maxYArr.push(maxY);
+        }
 
         // Turns it into a counted set of objects instead of single objects
         if(coOrdinateCounter[x+":"+y]){ // If this coOrdinateCounter exists add to it
@@ -88,7 +96,10 @@ nfcRing.heatmap = {
           nfcRing.heatmap.coOrds = coOrdinateCounter;
           localStorage.setItem("heatMapCache", JSON.stringify(nfcRing.heatmap.coOrds));
         }
-        // nfcRing.drawHeatMap();
+        console.log(maxXArr, maxYArr);
+
+        if(maxXArr.length > 0 && maxYArr.length > 0) nfcRing.heatmap.redrawCanvas(maxXArr, maxYArr);
+
         callback();
       }
 
@@ -101,21 +112,19 @@ nfcRing.heatmap = {
       }
     });
   },
-
-  sendToRemote: function(x,y,model){
-    console.log("Posting to remote", x, y, model);
-    var data = {
-      "x": x,
-      "y": y,
-      "model": model
-    }
-    $.post("http://sweetspot.nfcring.com/api/v1/sweetspot", data, function(results){
-      console.log("Success posting to remote");
-      alert(html10n.get("sweetSpot.yay"), false, html10n.get("sweetSpot.done"));
-      nfcRing.ui.displayPage("index");
-    }).fail(function(){
-      alert("Failed to share sweet spot location :(  Check your Internet connectivity"); 
-      nfcRing.ui.displayPage("index");
+  redrawCanvas: function (maxXArr, maxYArr){
+    var x = 0;
+    $.each(maxXArr,function() {
+      x += this;
     });
+    x = x / maxXArr.length;
+    $('#heatMap').css({"min-width":x+"px","width":x+"px"})
+
+    var y = 0;
+    $.each(maxYArr,function() {
+      y += this;
+    });
+    y = y / maxYArr.length;
+    $('#heatMap').css({"min-height":y+"px","height":y+"px"})
   }
 }
