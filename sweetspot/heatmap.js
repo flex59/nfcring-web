@@ -15,11 +15,14 @@ nfcRing.heatmap = {
       nfcRing.heatmap.config = { // Our heatmap config
         element: document.getElementById("heatMap"),
         radius: 30,
-        opacity: 100
+        opacity: 100,
+        gradient: {
+          '.95':'white'
+        }
       }
 
       nfcRing.heatmap.coOrdData = {};
-      nfcRing.heatmap.coOrdData.max = 20;
+      nfcRing.heatmap.coOrdData.max = 30;
       nfcRing.heatmap.coOrdData.data = [];
 
       $.each(nfcRing.heatmap.coOrds, function(k,v){
