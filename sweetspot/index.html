@@ -1,32 +1,58 @@
 <html>
 <head>
-  <script>
-    var nfcRing = {};
-
-  </script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="//rawgit.com/mclear/NFC_Ring_Control/master/www/js/heatmap.js"></script>
-  <script type="text/javascript" src="heatmap.js"></script>
+  <script type="text/javascript" src="./typeahead.js"></script>
 </head>
 
-<body style="margin:0;padding:0;">
-  <div id="heatMap" style="min-width:1000px;min-height:1000px;background-color:#000"></div>
+<body>
+  <form>
+    <input id="model" class="typeahead" type="text" placeholder="Table or Phone Model Number">
+    <input type="submit" value="This is my device!">
+  </form>
 </body>
 <script>
-  var model = gup("model");
-  if(!model) alert("no model set in query string");
+$.getJSON("http://sweetspot.nfcring.com/api/v2/device/list", function(models){
+  console.log(models);
 
-  var device = {
-    model: model
-  }
+  $('.typeahead').typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'models',
+    displayKey: 'value',
+    source: substringMatcher(models)
+  });
+})
 
-  nfcRing.heatmap.init();
+$('form').submit(function(e){
+  e.preventDefault();
+  window.location = "./sweetspot.html?model="+$('#model').val()
+});
 
-  function gup(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-       results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
+var substringMatcher = function(strs) {
+  return function findMatches(q, cb) {
+    var matches, substrRegex;
+ 
+    // an array that will be populated with substring matches
+    matches = [];
+ 
+    // regex used to determine if a string contains the substring `q`
+    substrRegex = new RegExp(q, 'i');
+ 
+    // iterate through the pool of strings and for any string that
+    // contains the substring `q`, add it to the `matches` array
+    $.each(strs, function(i, str) {
+      if (substrRegex.test(str)) {
+        // the typeahead jQuery plugin expects suggestions to a
+        // JavaScript object, refer to typeahead docs for more info
+        matches.push({ value: str });
+      }
+    });
+  cb(matches);
+  };
+};
+
 </script>
 </html>
