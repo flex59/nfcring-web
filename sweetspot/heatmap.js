@@ -48,7 +48,40 @@ nfcRing.heatmap = {
       console.log("3. Done writing data to the heatmap");
 
       nfcRing.heatmap.getImageLightness(function(b){
-        console.log("Brightness: "+b)
+
+        console.log("number of results", nfcRing.heatmap.coOrdData.data.length);
+
+        if(nfcRing.heatmap.coOrdData.data.length < 50){
+          $('body').append("We dont have enough data to make a call on this model");
+        }
+
+        $('body').append("Brightness: "+b + " - ")
+
+        if(b < 5){
+          $('body').append("performance is poor");
+          return;
+        }
+
+        if(b < 10){
+          $('body').append("performance is not great");   
+          return;
+        }
+
+        if(b < 20){
+          $('body').append("performance is okay");
+          return;
+        }
+       
+        if(b < 40){
+          $('body').append("performance is great");
+          return;
+        }
+
+        if(b < 60){
+          $('body').append("performance is amazing");
+          return;
+        }
+
       })
 
     });
