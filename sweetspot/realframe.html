@@ -15,6 +15,7 @@
   <div id="t">
     <div id="tl"></div>
     <div id="tm"></div>
+    <div id="toverlay"></div>
     <div id="tr"></div>
   </div>
   <div id="m">
@@ -121,6 +122,22 @@ sweetSpotDevice > div{
   background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.82) 100%);
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.82) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
+}
+
+#toverlay{
+  top:3px;
+  position:absolute;
+  left:168px;
+  right:168px;
+  opacity:0.1;
+  background: rgba(255,255,255,0);
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,0,0,0.25) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(0,0,0,0.25)));
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,0,0,0.25) 100%);
+  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,0,0,0.25) 100%);
+  background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(0,0,0,0.25) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(0,0,0,0.25) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=1 );
 }
 
 #display{
