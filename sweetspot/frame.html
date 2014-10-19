@@ -1,0 +1,156 @@
+<html>
+<body>
+
+  <div id="t">
+    <div id="tl"></div>
+    <div id="tm"></div>
+    <div id="tr"></div>
+  </div>
+  <div id="m">
+    <div id="l"></div>
+    <div id="loverlay"></div>
+    <div id="display"></div>
+    <div id="r"></div>
+  </div>
+  <div id="b">
+    <div id="bl"></div>
+    <div id="bm"></div>
+    <div id="br"></div>
+  </div>
+</div>
+
+<style type="text/css">
+body{
+  margin:0;
+}
+
+div{
+  margin:0;
+  padding:0;
+  font-size: 0;
+}
+
+#t,#m,#b{
+  position:relative;
+  width:1500px;
+  min-height:100px;
+}
+
+#t > div, #m > div, #b > div{
+  display: block;
+  min-height:200px;
+  height:100%;
+}
+
+#t {
+  height:200px;
+}  
+
+#t > div{
+  height:200px;
+  min-width:10px;
+}
+
+#b > div{
+  height:312px;
+  min-width:10px;
+}
+
+#tl{
+  width:560px;
+  background-image: url('./tl.png');
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#m{
+  min-height:1500px;
+}
+
+#tm{
+  background-image: url('./tm.png');
+  top:0;
+  position:absolute;
+  left:560px;
+  right:561px;
+}
+
+#tr{
+  width:560px;
+  background-image: url('./tr.png');
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+#l{
+  min-height:200px;
+  width:58px;
+  background-image: url('./l.png');
+  position:absolute;
+  left:0;
+}
+
+#loverlay{
+  min-height:200px;
+  width:43px;
+  position:absolute;
+  left:15px;
+  background: rgba(255,255,255,0);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.82) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(0,0,0,0.82)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.82) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.82) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.82) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.82) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
+}
+
+#display{
+  z-index:999;
+  min-width:300px;
+  left:58px;
+  right:57px
+  min-height:300px;
+  width:1090px;
+  background-color:#000;
+  position:absolute;
+  top:0px;
+}
+
+#r{
+  min-height:200px;
+  width:57px;
+  background-image: url('./r.png');
+  position:absolute;
+  right:2px;
+}
+
+#bl{
+  background-image: url('./bl.png');
+  width:551px;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#bm{
+  background-image: url('./bm.png');
+  position:absolute;
+  left:551px;
+  right:543px;
+  top:-2px;
+}
+
+#br{
+  background-image: url('./br.png');
+  width:543px;
+  position:absolute;
+  top:0;
+  right:0;
+}
+</style>
+
+</body>
+</html>
