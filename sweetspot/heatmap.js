@@ -52,13 +52,13 @@ nfcRing.heatmap = {
         console.log("number of results", nfcRing.heatmap.coOrdData.data.length);
 
         if(nfcRing.heatmap.coOrdData.data.length < 50){
-          $('body').append("We dont have enough data to make a call on this model");
+          $('#data').append("We dont have enough data to make a call on this model");
         }
 
-        $('body').append("Brightness: "+b + " - ")
+        $('#data').append("Brightness: "+b + " - ")
 
         if(b < 5){
-          $('body').append("performance is poor");
+          $('#data').append("performance is poor");
           return;
         }
 
@@ -156,7 +156,9 @@ nfcRing.heatmap = {
       x += this;
     });
     x = x / maxXArr.length;
-    $('#heatMap').css({"min-width":x+"px","width":x+"px"})
+    $('#heatMap, #display').css({"min-width":x+"px","width":x+"px"})
+    var overallWidth = x + 34;
+    $('#t, #m, #b').css({"width":overallWidth+"px"})
 
     var y = 0;
     $.each(maxYArr,function() {
@@ -164,6 +166,9 @@ nfcRing.heatmap = {
     });
     y = y / maxYArr.length;
     $('#heatMap').css({"min-height":y+"px","height":y+"px"})
+    var overallHeight = y + 1;
+    $('#m').css({"height":y+"px"})
+    $('#display').css({"height":overallHeight+"px"})
 
 //    nfcRing.heatmap.getImageLightness(function(b){alert("Brightness"+b)})
 
@@ -190,3 +195,4 @@ nfcRing.heatmap = {
   }
 
 }
+
