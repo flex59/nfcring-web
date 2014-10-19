@@ -28,7 +28,7 @@ $.getJSON("http://sweetspot.nfcring.com/api/v2/device/list", function(models){
 
 $('form').submit(function(e){
   e.preventDefault();
-  window.location = "./sweetspot.html?model="+$('#model').val()
+  window.location = "./realframe.html?model="+$('#model').val()
 });
 
 var substringMatcher = function(strs) {
