@@ -63,22 +63,22 @@ nfcRing.heatmap = {
         }
 
         if(b < 10){
-          $('body').append("performance is not great");   
+          $('#data').append("performance is not great");   
           return;
         }
 
         if(b < 20){
-          $('body').append("performance is okay");
+          $('#data').append("performance is okay");
           return;
         }
        
         if(b < 40){
-          $('body').append("performance is great");
+          $('#data').append("performance is great");
           return;
         }
 
         if(b < 60){
-          $('body').append("performance is amazing");
+          $('#data').append("performance is amazing");
           return;
         }
 
