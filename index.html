@@ -118,8 +118,8 @@ jQuery.ajax( {
   dataType: 'jsonp',
   success: function(location) {
     // If we're team America then rewrite store link
-    if(location.country_code === "US" || location.country_code === "CA"){
-      // $('.storeLink').attr("href","http://americas.nfcring.com");
+    if(location.country_code === "US" || location.country_code === "CA" || location.country_code === "MX"){
+      $('.storeLink').attr("href","http://americas.nfcring.com");
     }
   }
 } );
