@@ -1,0 +1,582 @@
+{
+    "timeline":
+    {
+        "headline":"NFC Ring Timeline",
+        "type":"default",
+        "text":"<p>A short history of the NFC Ring journey so far</p>",
+        "asset": {
+            "media":"http://nfcring.com/img/nfcring-logo.png",
+            "credit":"NFC Ring Logo",
+            "caption":"The worlds first ever smart ring"
+        },
+        "date": [
+            {
+                "startDate":"2012,10,01",
+                "endDate":"2012,10,01",
+                "headline":"Research Begins on making a ring",
+                "text":"<p>After 10 years working in Education John decides to take a step down as Managing Director of Primary Technology to persue some of his personal interests.  The first project he decided to work on was a way to open his house without a key.</p>",
+                "tag":"R&D"
+            },
+            {
+                "startDate":"2012,11,15",
+                "endDate":"2012,11,15",
+                "headline":"First working plastic metal ring is made",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2013,01,01",
+                "endDate":"2013,01,01",
+                "headline":"First working demo metal ring is made",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2013,06,18",
+                "endDate":"2013,06,18",
+                "headline":"Company officially registered",
+                "text":"<p>MCLEAR LIMITED is officially registered in the UK</p>",
+                "tag":"Business",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2013,07,01",
+                "endDate":"2013,07,01",
+                "headline":"Matt Mullenweg agrees Audrey Capital will invest in McLear Ltd",
+                "text":"<p></p>",
+                "tag":"Business",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2013,07,20",
+                "endDate":"2013,08,20",
+                "headline":"Kickstarter crowd-funding campaign",
+                "text":"<p></p>",
+                "tag":"Kickstarter",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2013,08,07",
+                "endDate":"2013,08,07",
+                "headline":"Sweet spot testing tool is created",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2013,09,10",
+                "endDate":"2013,09,10",
+                "headline":"Quality Assurance process introduced",
+                "text":"<p>https://github.com/JohnMcLear/nfc-ring-specs/wiki/Quality-Assurance-Procedure</p>",
+                "tag":"Business",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2013,10,02",
+                "endDate":"2013,10,02",
+                "headline":"NFC Ring is switched to Titanium, stops skin reactions but delays production by 4 weeks",
+                "text":"<p></p>",
+                "tag":"Delays",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,10,15",
+                "endDate":"2014,10,15",
+                "headline":"Ring is confirmed to be waterproof",
+                "text":"<p></p>",
+                "tag":"Improvements",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2013,10,02",
+                "endDate":"2013,10,02",
+                "headline":"Windows Phone App confirmed",
+                "text":"<p>http://video.uk.msn.com/?mkt=en-gb&vid=be501515-d3e8-4a9d-aed9-d2d11929255b&from=sharepermalink&src=v5:share:sharepermalink:</p>",
+                "tag":"App",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,11,26",
+                "endDate":"2014,11,26",
+                "headline":"First Palladium and Platinum engagement NFC Rings are made",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,12,03",
+                "endDate":"2014,12,03",
+                "headline":"Inlay provider provided wrong depth inlay putting project back by 4 weeks",
+                "text":"<p></p>",
+                "tag":"Delays",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,1,17",
+                "endDate":"2014,1,17",
+                "headline":"Windows Phone NFC Ring Control App goes live",
+                "text":"<p></p>",
+                "tag":"App",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,1,18",
+                "endDate":"2014,1,18",
+                "headline":"Sweet spot stickers arrive but they fail QA so go back to be re-made",
+                "text":"<p></p>",
+                "tag":"Delays",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,1,05",
+                "endDate":"2014,1,05",
+                "headline":"Carbon fiber found to interfear with readability",
+                "text":"<p></p>",
+                "tag":"Delays",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,1,31",
+                "endDate":"2014,2,31",
+                "headline":"Chinese New year slows production",
+                "text":"<p></p>",
+                "tag":"Stickers",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,01,05",
+                "endDate":"2014,01,05",
+                "headline":"NFC Ring Control Sweet Spot community database launched",
+                "text":"<p></p>",
+                "tag":"App",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,02,03",
+                "endDate":"2014,02,03",
+                "headline":"NFC Ring App Beta program launched",
+                "text":"<p></p>",
+                "tag":"App",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,03,02",
+                "endDate":"2014,03,02",
+                "headline":"Carbon Fiber options switched to production models",
+                "text":"<p></p>",
+                "tag":"Delays",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,05,22",
+                "endDate":"2014,05,22",
+                "headline":"Nerf NFC Gun makes it's first appearance",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,04,01",
+                "endDate":"2014,04,01",
+                "headline":"First Car is started with an NFC Ring",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,04,08",
+                "endDate":"2014,04,08",
+                "headline":"Single Sign on is launched",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,05,01",
+                "endDate":"2014,05,01",
+                "headline":"Forum moved to NodeBB",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,05,01",
+                "endDate":"2014,05,01",
+                "headline":"Free rings sent to innovators",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,05,01",
+                "endDate":"2014,05,01",
+                "headline":"New shock testing machine demonstrated",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,06,02",
+                "endDate":"2014,06,02",
+                "headline":"Vast Majority of Alpha rings failed QA",
+                "text":"<p></p>",
+                "tag":"Delays",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,06,02",
+                "endDate":"2014,06,02",
+                "headline":"Vast Majority of Alpha rings failed QA",
+                "text":"<p></p>",
+                "tag":"Delays",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,06,11",
+                "endDate":"2014,06,11",
+                "headline":"Internationalization added to NFC Ring Control",
+                "text":"<p></p>",
+                "tag":"Apps",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,06,11",
+                "endDate":"2014,06,11",
+                "headline":"STL Files provided for public consumption",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,06,18",
+                "endDate":"2014,06,18",
+                "headline":"NFC Ring Unlock gets prompts to tell user to scan a ring before enabling security",
+                "text":"<p></p>",
+                "tag":"App",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,08,29",
+                "endDate":"2014,08,29",
+                "headline":"Gift boxes introduced",
+                "text":"<p></p>",
+                "tag":"Business",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,08,29",
+                "endDate":"2014,08,29",
+                "headline":"VCard support demod",
+                "text":"<p></p>",
+                "tag":"App",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,08,29",
+                "endDate":"2014,08,29",
+                "headline":"3D model in browser NFC Ring Demod",
+                "text":"<p></p>",
+                "tag":"R&D",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,08,29",
+                "endDate":"2014,08,29",
+                "headline":"Sweet Spot stickers demod",
+                "text":"<p></p>",
+                "tag":"Business",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,09,15",
+                "endDate":"2014,09,15",
+                "headline":"Gift Cards introduced to the store",
+                "text":"<p></p>",
+                "tag":"Business",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,09,15",
+                "endDate":"2014,09,15",
+                "headline":"NFC Ring Unlock v1.6 launched, tasker support, getting started wizard etc.",
+                "text":"<p></p>",
+                "tag":"App",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,10,15",
+                "endDate":"2014,10,15",
+                "headline":"Android Native NFC Unlock support announced",
+                "text":"<p></p>",
+                "tag":"App",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            },
+            {
+                "startDate":"2014,10,25",
+                "endDate":"2014,10,25",
+                "headline":"Alpha rings available on the store",
+                "text":"<p></p>",
+                "tag":"Business",
+                "classname":"optionaluniqueclassnamecanbeaddedhere",
+                "asset": {
+                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "thumbnail":"optional-32x32px.jpg",
+                    "credit":"Credit Name Goes Here",
+                    "caption":"Caption text goes here"
+                }
+            } 
+
+
+
+
+        ],
+
+        "era": [
+            {
+                "startDate":"2012,12,10",
+                "endDate":"2013,06,01",
+                "headline":"Initial R&D",
+                "text":"<p>Era Body text goes here, some HTML is OK</p>",
+                "tag":"Era This is Optional"
+            },
+            {
+                "startDate":"2013,07,20",
+                "endDate":"2014,11,01",
+                "headline":"Kickstarter",
+                "text":"<p>Era Body text goes here, some HTML is OK</p>",
+                "tag":"Era This is Optional"
+            },
+            {
+                "startDate":"2014,2,01",
+                "endDate":"2014,11,01",
+                "headline":"Kickstarter Fulfilment",
+                "text":"<p>Era Body text goes here, some HTML is OK</p>",
+                "tag":"Era This is Optional"
+            }
+        ]
+    }
+}
