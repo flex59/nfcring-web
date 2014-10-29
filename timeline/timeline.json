@@ -13,8 +13,8 @@
             {
                 "startDate":"2012,10,01",
                 "endDate":"2012,10,01",
-                "headline":"Research Begins on making a ring",
-                "text":"<p></p>",
+                "headline":"Research Begins",
+                "text":"<p>John McLear, the founder of McLear Limited realises he is going to be getting married and wants to make a ring that can do something.  Research begins on making a ring that can be used to unlock doors with a digital door lock</p>",
                 "tag":"R&D",
                 "asset": {
                     "media":"./ringPrototypes.jpg",
@@ -24,7 +24,7 @@
             {
                 "startDate":"2012,11,15",
                 "endDate":"2012,11,15",
-                "headline":"First working plastic ring is made",
+                "headline":"First working plastic ring is made using Smartrac midas tags and Glass capsules",
                 "text":"",
                 "tag":"R&D",
                 "asset": {
@@ -37,8 +37,11 @@
                 "startDate":"2013,01,01",
                 "endDate":"2013,01,01",
                 "headline":"First working demo metal ring is made",
-                "text":"<p><img src='./midasRing.jpg'></p>",
-                "tag":"R&D"
+                "text":"<p>Using a Smartrac midas ring and ferrite a first working metal ring is made, this ring is very thick and has poor tuning</p>",
+                "tag":"R&D",
+                "asset": {
+                    "media":"./midasRing.jpg"
+                }
             },
             {
                 "startDate":"2013,06,18",
@@ -176,14 +179,7 @@
                 "endDate":"2014,2,31",
                 "headline":"Chinese New year slows production",
                 "text":"<p></p>",
-                "tag":"Stickers",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
+                "tag":"Stickers"
             },
             {
                 "startDate":"2014,01,05",
@@ -201,14 +197,7 @@
                 "endDate":"2014,02,03",
                 "headline":"NFC Ring App Beta program launched",
                 "text":"<p></p>",
-                "tag":"App",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
+                "tag":"App"
             },
             {
                 "startDate":"2014,03,02",
@@ -218,10 +207,8 @@
                 "tag":"Delays",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./production.png",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
@@ -314,31 +301,14 @@
                 }
             },
             {
-                "startDate":"2014,06,18",
-                "endDate":"2014,06,18",
-                "headline":"NFC Ring Unlock gets prompts to tell user to scan a ring before enabling security",
-                "text":"<p></p>",
-                "tag":"App",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
-            },
-            {
                 "startDate":"2014,08,29",
                 "endDate":"2014,08,29",
                 "headline":"Gift boxes introduced",
                 "text":"<p></p>",
                 "tag":"Business",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./giftBox.jpg",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
@@ -347,12 +317,8 @@
                 "headline":"VCard support demod",
                 "text":"<p></p>",
                 "tag":"App",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./vcard.png"
                 }
             },
             {
@@ -361,26 +327,20 @@
                 "headline":"3D model in browser NFC Ring Demod",
                 "text":"<p></p>",
                 "tag":"R&D",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./threejs.png",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
                 "startDate":"2014,08,29",
                 "endDate":"2014,08,29",
-                "headline":"Sweet Spot stickers demod",
+                "headline":"NFC enabled NFC Ring stickers introduced to the store",
                 "text":"<p></p>",
                 "tag":"Business",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./stickers.jpg",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
@@ -389,26 +349,20 @@
                 "headline":"Gift Cards introduced to the store",
                 "text":"<p></p>",
                 "tag":"Business",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./giftCard.jpg",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
                 "startDate":"2014,09,15",
                 "endDate":"2014,09,15",
-                "headline":"NFC Ring Unlock v1.6 launched, tasker support, getting started wizard etc.",
+                "headline":"NFC Ring Unlock v1.6 launched, widgets, tasker support & getting started wizard etc.",
                 "text":"<p></p>",
                 "tag":"App",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./widgets.png",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
@@ -417,7 +371,6 @@
                 "headline":"Android Native NFC Unlock support announced",
                 "text":"<p></p>",
                 "tag":"App",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
                     "media":"https://www.youtube.com/watch?v=bLk9qMw0hFU"
                 }
