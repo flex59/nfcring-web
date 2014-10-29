@@ -14,48 +14,40 @@
                 "startDate":"2012,10,01",
                 "endDate":"2012,10,01",
                 "headline":"Research Begins on making a ring",
-                "text":"<p>After 10 years working in Education John decides to take a step down as Managing Director of Primary Technology to persue some of his personal interests.  The first project he decided to work on was a way to open his house without a key.</p>",
-                "tag":"R&D"
+                "text":"<p></p>",
+                "tag":"R&D",
+                "asset": {
+                    "media":"./ringPrototypes.jpg",
+                    "thumbnail":"nfcring.png" 
+                }
             },
             {
                 "startDate":"2012,11,15",
                 "endDate":"2012,11,15",
-                "headline":"First working plastic metal ring is made",
-                "text":"<p></p>",
+                "headline":"First working plastic ring is made",
+                "text":"",
                 "tag":"R&D",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"http://www.youtube.com/embed/gwzqNlVqX6s",
+                    "thumbnail":"nfcring.png"
                 }
+
             },
             {
                 "startDate":"2013,01,01",
                 "endDate":"2013,01,01",
                 "headline":"First working demo metal ring is made",
-                "text":"<p></p>",
-                "tag":"R&D",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
+                "text":"<p><img src='./midasRing.jpg'></p>",
+                "tag":"R&D"
             },
             {
                 "startDate":"2013,06,18",
                 "endDate":"2013,06,18",
-                "headline":"Company officially registered",
-                "text":"<p>MCLEAR LIMITED is officially registered in the UK</p>",
+                "headline":"Company officially registered #08308520",
+                "text":"<p>MCLEAR LIMITED is officially registered in the UK with the company number 08308520</p>",
                 "tag":"Business",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./crest.png"
                 }
             },
             {
@@ -66,24 +58,18 @@
                 "tag":"Business",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./matt.jpg"
                 }
             },
             {
                 "startDate":"2013,07,20",
                 "endDate":"2013,08,20",
-                "headline":"Kickstarter crowd-funding campaign",
+                "headline":"Kickstarter crowd-funding campaign begins",
                 "text":"<p></p>",
                 "tag":"Kickstarter",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"https://twitter.com/NfcRing/status/358565396325998592",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
@@ -162,7 +148,6 @@
                 "headline":"First Palladium and Platinum engagement NFC Rings are made",
                 "text":"<p></p>",
                 "tag":"R&D",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
                     "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
                     "thumbnail":"nfcring.png",
@@ -528,10 +513,7 @@
                 "tag":"App",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"https://www.youtube.com/watch?v=bLk9qMw0hFU"
                 }
             },
             {
