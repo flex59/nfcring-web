@@ -167,7 +167,7 @@
             {
                 "startDate":"2014,1,05",
                 "endDate":"2014,1,05",
-                "headline":"Carbon fiber found to interfear with readability",
+                "headline":"Carbon fiber found to interfere with readability",
                 "text":"<p></p>",
                 "tag":"Delays",
                 "asset": {
@@ -214,7 +214,7 @@
             {
                 "startDate":"2014,05,22",
                 "endDate":"2014,05,22",
-                "headline":"Nerf NFC Gun makes it's first appearance",
+                "headline":"Nerf NFC Gun makes its first appearance",
                 "text":"<p></p>",
                 "tag":"R&D",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
@@ -314,7 +314,7 @@
             {
                 "startDate":"2014,08,29",
                 "endDate":"2014,08,29",
-                "headline":"VCard support demod",
+                "headline":"VCard support demoed",
                 "text":"<p></p>",
                 "tag":"App",
                 "asset": {
@@ -324,7 +324,7 @@
             {
                 "startDate":"2014,08,29",
                 "endDate":"2014,08,29",
-                "headline":"3D model in browser NFC Ring Demod",
+                "headline":"3D model in browser NFC Ring Demoed",
                 "text":"<p></p>",
                 "tag":"R&D",
                 "asset": {
