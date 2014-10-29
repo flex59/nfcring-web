@@ -80,10 +80,7 @@
                 "tag":"R&D",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"https://www.youtube.com/watch?feature=player_embedded&v=WYHmERbewWA"
                 }
             },
             {
@@ -92,12 +89,8 @@
                 "headline":"Quality Assurance process introduced",
                 "text":"<p>https://github.com/JohnMcLear/nfc-ring-specs/wiki/Quality-Assurance-Procedure</p>",
                 "tag":"Business",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                "asset":{
+                    "media":"https://s3.amazonaws.com/ksr/assets/001/532/869/652e71484fabb3700488bb9cf3fad7d1_large.jpg?1389891390"
                 }
             },
             {
@@ -106,13 +99,7 @@
                 "headline":"NFC Ring is switched to Titanium, stops skin reactions but delays production by 4 weeks",
                 "text":"<p></p>",
                 "tag":"Delays",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
+                "classname":"optionaluniqueclassnamecanbeaddedhere"
             },
             {
                 "startDate":"2014,10,15",
@@ -122,10 +109,7 @@
                 "tag":"Improvements",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"https://www.youtube.com/watch?v=bK5yNESfqC4"
                 }
             },
             {
@@ -136,10 +120,7 @@
                 "tag":"App",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"http://www.youtube.com/watch?v=-xuhKgc1Ahs"
                 }
             },
             {
@@ -149,10 +130,7 @@
                 "text":"<p></p>",
                 "tag":"R&D",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"https://www.youtube.com/watch?v=ua9gDfiidHE"
                 }
             },
             {
@@ -160,14 +138,7 @@
                 "endDate":"2014,12,03",
                 "headline":"Inlay provider provided wrong depth inlay putting project back by 4 weeks",
                 "text":"<p></p>",
-                "tag":"Delays",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
+                "tag":"Delays"
             },
             {
                 "startDate":"2014,1,17",
@@ -175,12 +146,9 @@
                 "headline":"Windows Phone NFC Ring Control App goes live",
                 "text":"<p></p>",
                 "tag":"App",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./windowsPhone.png",
+                    "credit":"MSN"
                 }
             },
             {
@@ -189,12 +157,8 @@
                 "headline":"Sweet spot stickers arrive but they fail QA so go back to be re-made",
                 "text":"<p></p>",
                 "tag":"Delays",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"https://www.youtube.com/watch?feature=player_embedded&v=AUA5N9sZMP8"
                 }
             },
             {
@@ -203,12 +167,8 @@
                 "headline":"Carbon fiber found to interfear with readability",
                 "text":"<p></p>",
                 "tag":"Delays",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"https://www.youtube.com/watch?v=p05mJxBCu5k"
                 }
             },
             {
@@ -233,10 +193,7 @@
                 "tag":"App",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./sweetSpot.png"
                 }
             },
             {
@@ -275,7 +232,7 @@
                 "tag":"R&D",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "media":"./nerf.jpg",
                     "thumbnail":"nfcring.png",
                     "credit":"Credit Name Goes Here",
                     "caption":"Caption text goes here"
@@ -289,10 +246,9 @@
                 "tag":"R&D",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
+                    "media":"https://www.youtube.com/watch?v=bpM0aRySt9E",
                     "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "credit":"MrStein"
                 }
             },
             {
@@ -300,42 +256,22 @@
                 "endDate":"2014,04,08",
                 "headline":"Single Sign on is launched",
                 "text":"<p></p>",
-                "tag":"R&D",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
+                "tag":"R&D"
             },
             {
                 "startDate":"2014,05,01",
                 "endDate":"2014,05,01",
                 "headline":"Forum moved to NodeBB",
                 "text":"<p></p>",
-                "tag":"R&D",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
+                "tag":"R&D"
+
             },
             {
                 "startDate":"2014,05,01",
                 "endDate":"2014,05,01",
-                "headline":"Free rings sent to innovators",
+                "headline":"Free NFC rings sent to innovators",
                 "text":"<p></p>",
-                "tag":"R&D",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
+                "tag":"R&D"
             },
             {
                 "startDate":"2014,05,01",
@@ -343,12 +279,9 @@
                 "headline":"New shock testing machine demonstrated",
                 "text":"<p></p>",
                 "tag":"R&D",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"https://www.youtube.com/watch?v=LHOeYNABwEI",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
@@ -356,28 +289,7 @@
                 "endDate":"2014,06,02",
                 "headline":"Vast Majority of Alpha rings failed QA",
                 "text":"<p></p>",
-                "tag":"Delays",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
-            },
-            {
-                "startDate":"2014,06,02",
-                "endDate":"2014,06,02",
-                "headline":"Vast Majority of Alpha rings failed QA",
-                "text":"<p></p>",
-                "tag":"Delays",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
-                "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
-                }
+                "tag":"Delays"
             },
             {
                 "startDate":"2014,06,11",
@@ -385,26 +297,20 @@
                 "headline":"Internationalization added to NFC Ring Control",
                 "text":"<p></p>",
                 "tag":"Apps",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./i18n.png",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
                 "startDate":"2014,06,11",
                 "endDate":"2014,06,11",
-                "headline":"STL Files provided for public consumption",
+                "headline":"STL Files made open source",
                 "text":"<p></p>",
                 "tag":"R&D",
-                "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./stl.png",
+                    "thumbnail":"nfcring.png"
                 }
             },
             {
@@ -524,10 +430,8 @@
                 "tag":"Business",
                 "classname":"optionaluniqueclassnamecanbeaddedhere",
                 "asset": {
-                    "media":"http://twitter.com/ArjunaSoriano/status/164181156147900416",
-                    "thumbnail":"nfcring.png",
-                    "credit":"Credit Name Goes Here",
-                    "caption":"Caption text goes here"
+                    "media":"./alpha.jpg",
+                    "thumbnail":"nfcring.png"
                 }
             } 
 
