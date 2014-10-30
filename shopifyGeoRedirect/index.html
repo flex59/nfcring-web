@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>geoRedirect Cookie logic for store.nfcring.com</title>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="./jquery.cookie.js"></script>
+<script src="./jquery.modal.min.js"></script>
+<link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
+<script>
+var geoRedirect = {
+  shouldRedirect: function(countryCodes, callback){
+    $.get("http://ipinfo.io", function(location) {
+      location.country = "US"; // Set temp to test
+      if(countryCodes.indexOf(location.country) > -1){
+        // If this country needs redirecting show prompt
+        callback(true);
+      }else{
+        callback(false)
+      }
+    }, "jsonp");
+  },
+  setDontRedirectCookie: function(){
+    $.cookie('dontRedirect', 'true', { expires: 30, path: '/' });
+  },
+  resetCookie: function(){
+    $.removeCookie('dontRedirect', { path: '/' });
+  },
+  init: function(){
+    if($.cookie('dontRedirect')) return;
+    this.shouldRedirect(["US", "CA", "MX"], function(shouldRedirect){
+      $('#modal').modal();
+    });
+
+  }
+}
+</script>
+</head>
+
+<body style='max-width:600px;margin:0 auto;margin-top:50px;' id='bodyContent'>
+
+<p>If a user arrives on Store.nfcring.com and they are from a specific country code then prompt them to redirect if a cookie isn't set saying they don't want to redirect</p>
+
+<div id='modal' style='display:none'>Whoa there, looks like you need to visit a different store, would you like for us to redirect you now?<p><button onClick='window.location = "http://americas.nfcring.com"'>Yes please redirect me</button><button onClick='geoRedirect.setDontRedirectCookie();$.modal.close()'>No, and don't ask again!</button></p></div>
+<button onClick='geoRedirect.init()'>Begin process</button>
+<button onClick='geoRedirect.resetCookie()'>Reset redirect cookie</button>
+</body>
+</html>
