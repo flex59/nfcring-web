@@ -148,7 +148,7 @@ img {
   display: inline-block;
   max-width: 60%;
 }
-.starter .promo-offer h3 {
+.starter .promo-offer h2 {
   font-size: 2.8em;
   font-weight: 500;
   text-transform: uppercase;
@@ -156,16 +156,27 @@ img {
   margin: 5px 0;
   padding: 0;
 }
-.starter .promo-offer h3 span {
+.starter .promo-offer h2 span {
   display: block;
-
   line-height: 0.9em;
   color: #f7931a;
 }
-.starter .promo-offer h3 span em {
+.starter .promo-offer h2 span em {
   font-style: normal;
   font-size: 0.89em;
   color: #162132;
+}
+.starter .promo-offer h3 {
+  font-size: 1.6em;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  margin: 5px 0;
+  padding: 0;
+}
+.starter .promo-offer h3 strong {
+  font-size:1.6em;
+  font-weight:500;  
 }
 .starter .promo-offer a {
   margin-top: 10px;
@@ -367,7 +378,7 @@ img {
     display: inline-block;
     vertical-align: middle;
   }
-  .starter .intro .promo-offer h3 {
+  .starter .intro .promo-offer h2 {
     display: inline-block;
     vertical-align: middle;
     margin-left: 0;
