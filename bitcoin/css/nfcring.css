@@ -254,7 +254,7 @@ img {
 .kickstarter .wrap a {
   display: inline-block;
 }
-.kickstarter .wrap a img {
+.kickstarter .wrap img {
   width: 95%;
   max-width: 400px;
   display: inline-block;
