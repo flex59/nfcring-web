@@ -161,7 +161,7 @@ img {
   max-width: 60%;
 }
 .starter .btc-friday h3 {
-  font-size: 2.2em;
+  font-size: 2.8em;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1.1em;
@@ -170,7 +170,7 @@ img {
 }
 .starter .btc-friday h3 span {
   display: block;
-  font-size: 1.3em;
+
   line-height: 0.9em;
   color: #f7931a;
 }
@@ -218,9 +218,24 @@ img {
 .rings .block img {
   display: inline-block;
 }
+.rings .block .price {
+  color:#f00;
+  font-size:1.8em;
+  margin:0;
+  padding:0 0 10px 0;
+}
+.rings .block .price em {
+ text-decoration: line-through;
+ color:#333;
+}
 .rings .message {
   clear: both;
   text-align: center;
+  font-weight: normal;
+  color:#666;
+}
+.rings .message strong {
+  color:#000;
 }
 .rings .message span {
   display: block;
@@ -388,7 +403,7 @@ img {
     padding: 1.5%;
     display: inline-block;
     text-align: center;
-    margin: -120px 0 0 0;
+    margin: 0;
     border: 0;
   }
   .rings .block h3 {
