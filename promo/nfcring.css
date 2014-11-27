@@ -18,12 +18,6 @@ p {
 .button,
 .button:visited {
   background: #e63712;
-  /*
-	border: 1px solid darken(@orange, 13%);
-	border-top-color: darken(@orange, 7%);
-	border-left-color: darken(@orange, 7%);
-*/
-
   border: 0;
   padding: 1em 2em;
   color: #ffffff;
@@ -50,12 +44,6 @@ p {
 .button:visited:focus {
   background-color: #ce3110;
   color: #ffffff;
-  /*
-	  border: 1px solid darken(@orange, 13%);
-	  border-top-color: darken(@orange, 20%);
-	 	border-left-color: darken(@orange, 20%);
-*/
-
 }
 .button:active,
 .button:visited:active {
@@ -153,14 +141,14 @@ img {
 .starter .video a {
   display: inline-block;
 }
-.starter .btc-friday {
+.starter .promo-offer {
   text-align: center;
 }
-.starter .btc-friday img {
+.starter .promo-offer img {
   display: inline-block;
   max-width: 60%;
 }
-.starter .btc-friday h3 {
+.starter .promo-offer h3 {
   font-size: 2.8em;
   font-weight: 500;
   text-transform: uppercase;
@@ -168,18 +156,18 @@ img {
   margin: 5px 0;
   padding: 0;
 }
-.starter .btc-friday h3 span {
+.starter .promo-offer h3 span {
   display: block;
 
   line-height: 0.9em;
   color: #f7931a;
 }
-.starter .btc-friday h3 span em {
+.starter .promo-offer h3 span em {
   font-style: normal;
   font-size: 0.89em;
   color: #162132;
 }
-.starter .btc-friday a {
+.starter .promo-offer a {
   margin-top: 10px;
 }
 #notice {
@@ -371,18 +359,18 @@ img {
     display: inline-block;
     max-width: 290px;
   }
-  .starter .intro .btc-friday {
+  .starter .intro .promo-offer {
     text-align: left;
   }
-  .starter .intro .btc-friday img {
+  .starter .intro .promo-offer img {
     max-width: 120px;
     display: inline-block;
     vertical-align: middle;
   }
-  .starter .intro .btc-friday h3 {
+  .starter .intro .promo-offer h3 {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 10px;
+    margin-left: 0;
   }
   .starter .video {
     text-align: right;
