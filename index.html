@@ -114,8 +114,8 @@
 <script type="text/javascript">
 jQuery.ajax( {
   url: '//sweetspot.nfcring.com/geoip',
-  type: 'GET',
-  dataType: 'json',
+  type: 'POST',
+  dataType: 'jsonp',
   success: function(location) {
     // If we're team America then rewrite store link
     if(location.country === "US" || location.country === "CA" || location.country === "MX"){
