@@ -113,14 +113,17 @@
     </div>
 <script type="text/javascript">
 jQuery.ajax( {
-  url: '//sweetspot.nfcring.com/geoip',
-  type: 'POST',
-  dataType: 'jsonp',
+  url: '//sweetspot.nfcring.com/geoip/',
+  type: 'GET',
+  dataType: 'json',
   success: function(location) {
     // If we're team America then rewrite store link
     if(location.country === "US" || location.country === "CA" || location.country === "MX"){
       $('.storeLink').attr("href","http://americas.nfcring.com");
     }
+  },
+  error: function(e){
+    console.log(e);
   }
 } );
 </script>
