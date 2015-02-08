@@ -1,0 +1,118 @@
+#container {
+  background: #fff url(../img/bg-angles.jpg) repeat-x center top;
+}
+header {
+  background: transparent;
+  padding-bottom:30px;
+}
+#nfcring-logo {
+  margin-top:35px;
+  margin-bottom: 5px;
+}
+
+#content {
+  background: transparent;
+}
+
+.preheader {
+  text-align: center;
+  position: relative;
+}
+
+.preheader .nfcring-logo {
+  margin:0 auto;
+  margin-top:10px;
+  max-width: 220px;
+  display: block;
+  text-align: center;
+}
+.preheader .nfcring-logo img {
+  display: inline;
+}
+
+.box-win {
+  color:#fff;
+  background: #e63812;
+  display: inline-block;
+  padding:25px 30px 15px 30px;
+}
+
+.box-win p {
+  font-family: "effra", sans-serif;
+  font-size: 6em;
+  font-style: bold;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.heavy {
+  text-transform: uppercase;
+  font-size: 4em;
+  font-style: bold;
+  font-weight: 700;
+  color:#182032;
+  line-height: 1;
+  letter-spacing: -1px;
+  padding:30px 15px 50px 15px;
+}
+
+.heavy span {
+  color:#e63812;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.block h3 {
+  color:#182032;
+  font-family: "effra", sans-serif;
+  font-size: 3em;
+  font-style: bold;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.block .button {
+  max-width:260px;
+  float:none!important;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.block .button:hover {
+  color:#fff;
+}
+
+#enter-comp {
+  display: none;
+}
+
+@media only screen and (min-width: 480px) {
+
+  .heavy {
+    font-size: 6em;
+  }
+
+  .block-third {
+    width:40%;
+  }
+  
+  .block-two-thirds {
+    width:50%;
+  }
+  
+}
+
+@media only screen and (min-width: 590px) {
+
+  .preheader .nfcring-logo {
+    position: absolute;
+    top:15px;
+    right:15px;
+    max-width: 180px;
+    margin-top: 0;
+  }
+  
+}
