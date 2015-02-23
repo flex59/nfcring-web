@@ -88,7 +88,7 @@
 	    
 	    <div id="enter-comp">
         <div class="giveaway">
-          <a class="rcptr" href="http://www.rafflecopter.com/rafl/display/2b041e2d1/" rel="nofollow" data-raflid="2b041e2d1" data-theme="classic" data-template="" id="rcwidget_oeqc844c">a Rafflecopter giveaway</a>
+          <a class="rcptr" href="http://www.rafflecopter.com/rafl/display/2b041e2d1/" rel="nofollow" data-raflid="2b041e2d1" data-theme="classic" data-template="" id="rcwidget_oeqc844c">Win awesome stuff with NFC Ring</a>
           <script src="//widget-prime.rafflecopter.com/launch.js"></script>
         </div>
 	    </div>
@@ -128,10 +128,23 @@
 <script type="text/javascript">
 	jQuery(document).ready(function() {
 		jQuery(".fancybox").fancybox({
-      autoHeight: true
+      height: '100%',
+      maxWidth: 420,
+      autoSize	: false,
+      closeClick	: false,
+      iframe: {
+	      scrolling : 'auto',
+        preload   : true
+      }
 		});
 	});
 </script>
+
+<style type="text/css">
+#enter-comp {
+  display: none;
+}
+</style>
     
 <script type="text/javascript">
 jQuery.ajax( {
