@@ -75,7 +75,7 @@ header {
 }
 
 .block .button {
-  max-width:260px;
+  width:100%;
   float:none!important;
   font-size: 2.4em;
   text-transform: uppercase;
@@ -88,8 +88,13 @@ header {
 #enter-comp {
   
   iframe {
-    margin:0;
+    margin:0!important;
   }
+}
+
+.fancybox-inner {
+  -webkit-overflow-scrolling: touch !important;
+  overflow: scroll !important;
 }
 
 @media only screen and (min-width: 480px) {
@@ -104,6 +109,10 @@ header {
   
   .block-two-thirds {
     width:50%;
+  }
+  
+  .block .button {
+    max-width:260px;
   }
   
 }

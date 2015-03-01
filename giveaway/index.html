@@ -34,6 +34,7 @@
 
     
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="../bitcoin/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		<script type="text/javascript" src="../js/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -81,16 +82,22 @@
 						<p>For each tweet you post about the competition, you'll gain an extra entry (1 tweet per day counted).</p>
 						<p>Complete other actions listed to gain more entries.</p>
 						
-            <a href="#enter-comp" class="fancybox button" data-fancybox-type="inline" >Enter Now</a>
+            <a href="#enter-comp" class="fancybox button btn-enter" data-fancybox-type="inline" >Enter Now</a>
             <p>Terms & Conditions apply</p>
+            
+      	    <div id="enter-comp">
+              <div class="giveaway">
+                <a class="rcptr" href="http://www.rafflecopter.com/rafl/display/2b041e2d1/" rel="nofollow" data-raflid="2b041e2d1" data-theme="classic" data-template="" id="rcwidget_oeqc844c">Win awesome stuff with NFC Ring</a>
+                <script src="//widget-prime.rafflecopter.com/launch.js"></script>
+              </div>
+      	    </div>
             
             <p>We're trying to get the word out about the NFC Ring, so any messages of support, likes, shares or drawings of unicorns are always appreciated.</p>
 						
 	    	  </div>
 	    	  	    	
 	    	</div>
-	    	<br clear="all" />
-	    	
+	    	<br clear="all" />	    	
 	    </section>
 	    
 	    <section id="preorders">
@@ -102,13 +109,6 @@
       	  <a href="http://store.nfcring.com" class="button enter-button storeLink" >Visit the store</a>
       	</div>
 	    </section>
-	    
-	    <div id="enter-comp">
-        <div class="giveaway">
-          <a class="rcptr" href="http://www.rafflecopter.com/rafl/display/2b041e2d1/" rel="nofollow" data-raflid="2b041e2d1" data-theme="classic" data-template="" id="rcwidget_oeqc844c">Win awesome stuff with NFC Ring</a>
-          <script src="//widget-prime.rafflecopter.com/launch.js"></script>
-        </div>
-	    </div>
       
 
       <section id="interest">
@@ -144,16 +144,25 @@
     </div>
 <script type="text/javascript">
 	jQuery(document).ready(function() {
-		jQuery(".fancybox").fancybox({
-      height: '100%',
-      maxWidth: 420,
-      autoSize	: false,
-      closeClick	: false,
-      iframe: {
-	      scrolling : 'auto',
-        preload   : true
-      }
-		});
+  	
+    if (Modernizr.mq('only screen and (min-width: 480px)')) {
+  		jQuery(".fancybox").fancybox({
+        height: '100%',
+        maxWidth: 420,
+        autoSize	: false,
+        closeClick	: false,
+        iframe: {
+  	      scrolling : 'auto',
+          preload   : true
+        }
+  		});
+    } else {
+      jQuery(".btn-enter").on('click', function(e){
+        e.preventDefault();
+        jQuery('#enter-comp').slideDown('fast');
+        jQuery("html, body").animate({ scrollTop: $('#enter-comp').offset().top }, 1000);
+      });
+    }
 	});
 </script>
 
