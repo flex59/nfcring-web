@@ -61,6 +61,21 @@ header {
   color:#e63812;
 }
 
+.mid {
+  text-transform: uppercase;
+  font-size: 3em;
+  font-style: bold;
+  font-weight: 700;
+  color:#182032;
+  line-height: 1;
+  letter-spacing: -1px;
+  padding:30px 15px 20px 15px;
+}
+
+.mid span {
+  color:#e63812;
+}
+
 .align-center {
   text-align: center;
 }
@@ -83,6 +98,11 @@ header {
 }
 .block .button:hover {
   color:#fff;
+}
+
+.block-centered {
+  margin:0 auto;
+  float:none!important;
 }
 
 #enter-comp {
