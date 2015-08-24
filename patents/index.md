@@ -5,7 +5,7 @@ TLDR; We allow free licensing of our patents.
 To ensure we don't stifle innovation.
 
 ## Which patents can be freely licensed?
-US 2015/0042450-A1: Covers:
+http://www.google.com/patents/US20150042450 -- US 2015/0042450-A1: Covers:
 * Inserting NFC inlays in a Ring Embodiment (Both metallic and ceramic)
 * Using Hand Gestures to perform different tasks with a Ring including unlocking a phone and sharing contact information
 * Interacting between a Ring and an access control system
