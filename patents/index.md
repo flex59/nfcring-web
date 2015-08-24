@@ -1,5 +1,3 @@
-== VIEW ME AS MARKDOWN
-
 # We do patents differently.
 TLDR; We allow free licensing of our patents.
 
