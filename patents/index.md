@@ -14,8 +14,9 @@ http://www.google.com/patents/US20150042450 -- US 2015/0042450-A1: Covers:
 If you wish to license our patent simply email contact@nfcring.com with your company/personal contact details.
 
 ## Current Licensees
-* Visa Inc
+* Visa Collab Inc
 * Mastercard Inc
+* DangerousThings Inc
 
 ## What if I don't get a license sorted before I ship?
 Due to the current status quo we have to take some action:
